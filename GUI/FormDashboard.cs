@@ -29,7 +29,7 @@ public partial class FormDashboard : Form
     private void Menu_formSupplier_Click(object sender, EventArgs e) => OpenForm(new FormSupplier());
     
     // 3. Bảo hành
-    private void Menu_formWarranty_Click(object sender, EventArgs e) => OpenForm(new FormWarranty());
+    private void Menu_formWarranty_Click(object sender, EventArgs e) => OpenForm(new FormGuarantee());
     private void Menu_formTradeIn_Click(object sender, EventArgs e) => OpenForm(new FormTradeIn());
     
     // 4. Báo cáo
@@ -52,9 +52,6 @@ public partial class FormDashboard : Form
             this.Close();
         }
     }
-
-
     
-
 }
     

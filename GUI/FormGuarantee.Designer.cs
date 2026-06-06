@@ -2,7 +2,7 @@ using System.ComponentModel;
 
 namespace Desktop_Application_Development;
 
-partial class FormWarranty
+partial class FormGuarantee
 {
     /// <summary>
     /// Required designer variable.

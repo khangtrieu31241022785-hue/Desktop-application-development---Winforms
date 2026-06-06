@@ -28,70 +28,70 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            dgvSuppliers = new DataGridView();
-            txtSupplierCode = new TextBox();
-            txtSupplierName = new TextBox();
-            txtPhone = new TextBox();
-            txtAddress = new TextBox();
-            btnAdd = new Button();
-            btnUpdate = new Button();
-            btnClear = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            dgvSuppliers = new System.Windows.Forms.DataGridView();
+            txtSupplierCode = new System.Windows.Forms.TextBox();
+            txtSupplierName = new System.Windows.Forms.TextBox();
+            txtPhone = new System.Windows.Forms.TextBox();
+            txtAddress = new System.Windows.Forms.TextBox();
+            btnAdd = new System.Windows.Forms.Button();
+            btnUpdate = new System.Windows.Forms.Button();
+            btnClear = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dgvSuppliers).BeginInit();
             SuspendLayout();
             // 
             // dgvSuppliers
             // 
-            dgvSuppliers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSuppliers.Location = new Point(19, 223);
-            dgvSuppliers.Margin = new Padding(4, 5, 4, 5);
+            dgvSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSuppliers.Location = new System.Drawing.Point(13, 226);
+            dgvSuppliers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             dgvSuppliers.Name = "dgvSuppliers";
             dgvSuppliers.RowHeadersWidth = 51;
-            dgvSuppliers.Size = new Size(1013, 385);
+            dgvSuppliers.Size = new System.Drawing.Size(1971, 922);
             dgvSuppliers.TabIndex = 0;
             dgvSuppliers.CellClick += dgvSuppliers_CellClick;
             // 
             // txtSupplierCode
             // 
-            txtSupplierCode.Location = new Point(160, 31);
-            txtSupplierCode.Margin = new Padding(4, 5, 4, 5);
+            txtSupplierCode.Location = new System.Drawing.Point(160, 31);
+            txtSupplierCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             txtSupplierCode.Name = "txtSupplierCode";
-            txtSupplierCode.Size = new Size(265, 27);
+            txtSupplierCode.Size = new System.Drawing.Size(265, 47);
             txtSupplierCode.TabIndex = 1;
             // 
             // txtSupplierName
             // 
-            txtSupplierName.Location = new Point(160, 77);
-            txtSupplierName.Margin = new Padding(4, 5, 4, 5);
+            txtSupplierName.Location = new System.Drawing.Point(160, 77);
+            txtSupplierName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             txtSupplierName.Name = "txtSupplierName";
-            txtSupplierName.Size = new Size(265, 27);
+            txtSupplierName.Size = new System.Drawing.Size(265, 47);
             txtSupplierName.TabIndex = 2;
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(160, 123);
-            txtPhone.Margin = new Padding(4, 5, 4, 5);
+            txtPhone.Location = new System.Drawing.Point(160, 123);
+            txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(265, 27);
+            txtPhone.Size = new System.Drawing.Size(265, 47);
             txtPhone.TabIndex = 3;
             // 
             // txtAddress
             // 
-            txtAddress.Location = new Point(160, 169);
-            txtAddress.Margin = new Padding(4, 5, 4, 5);
+            txtAddress.Location = new System.Drawing.Point(160, 169);
+            txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(265, 27);
+            txtAddress.Size = new System.Drawing.Size(265, 47);
             txtAddress.TabIndex = 4;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(467, 28);
-            btnAdd.Margin = new Padding(4, 5, 4, 5);
+            btnAdd.Location = new System.Drawing.Point(467, 28);
+            btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(133, 46);
+            btnAdd.Size = new System.Drawing.Size(133, 46);
             btnAdd.TabIndex = 5;
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = true;
@@ -99,10 +99,10 @@ namespace GUI
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(467, 89);
-            btnUpdate.Margin = new Padding(4, 5, 4, 5);
+            btnUpdate.Location = new System.Drawing.Point(467, 89);
+            btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(133, 46);
+            btnUpdate.Size = new System.Drawing.Size(133, 46);
             btnUpdate.TabIndex = 6;
             btnUpdate.Text = "Cập nhật";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -110,10 +110,10 @@ namespace GUI
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(467, 151);
-            btnClear.Margin = new Padding(4, 5, 4, 5);
+            btnClear.Location = new System.Drawing.Point(467, 151);
+            btnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(133, 46);
+            btnClear.Size = new System.Drawing.Size(133, 46);
             btnClear.TabIndex = 7;
             btnClear.Text = "Làm mới";
             btnClear.UseVisualStyleBackColor = true;
@@ -122,48 +122,48 @@ namespace GUI
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(27, 35);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new System.Drawing.Point(27, 35);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(66, 20);
+            label1.Size = new System.Drawing.Size(134, 41);
             label1.TabIndex = 8;
             label1.Text = "Mã NCC:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(27, 82);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new System.Drawing.Point(27, 82);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(68, 20);
+            label2.Size = new System.Drawing.Size(138, 41);
             label2.TabIndex = 9;
             label2.Text = "Tên NCC:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(27, 128);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new System.Drawing.Point(27, 128);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(39, 20);
+            label3.Size = new System.Drawing.Size(78, 41);
             label3.TabIndex = 10;
             label3.Text = "SĐT:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(27, 174);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new System.Drawing.Point(27, 174);
+            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(58, 20);
+            label4.Size = new System.Drawing.Size(114, 41);
             label4.TabIndex = 11;
             label4.Text = "Địa chỉ:";
             // 
             // FormSupplier
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1045, 678);
+            AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1997, 1162);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -176,14 +176,12 @@ namespace GUI
             Controls.Add(txtSupplierName);
             Controls.Add(txtSupplierCode);
             Controls.Add(dgvSuppliers);
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "FormSupplier";
+            Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             Text = "Quản lý Nhà cung cấp";
             Load += FormSupplier_Load;
             ((System.ComponentModel.ISupportInitialize)dgvSuppliers).EndInit();
             ResumeLayout(false);
             PerformLayout();
-
         }
 
         #endregion

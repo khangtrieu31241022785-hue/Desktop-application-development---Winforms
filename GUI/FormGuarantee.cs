@@ -5,7 +5,7 @@ using DTO;
 
 namespace Desktop_Application_Development
 {
-    public partial class FormWarranty : Form
+    public partial class FormGuarantee : Form
     {
         // 1. Khai báo các đối tượng giao tiếp với tầng BUS
         private readonly WarrantyBUS _warrantyBUS = new WarrantyBUS();
@@ -18,7 +18,7 @@ namespace Desktop_Application_Development
         private int _currentCustomerID = 0;
         private int _selectedClaimID = 0;
 
-        public FormWarranty()
+        public FormGuarantee()
         {
             InitializeComponent();
         }
@@ -196,7 +196,6 @@ namespace Desktop_Application_Development
         }
 
         // --- CÁC HÀM TRỐNG ĐỂ TRÁNH LỖI VĂNG APP ---
-        // Do bạn đã lỡ tay click đúp vào nên UI đã sinh ra 2 hàm này, hãy để trống chúng, đừng xóa nhé.
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
         }
