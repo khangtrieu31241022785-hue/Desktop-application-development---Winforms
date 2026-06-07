@@ -31,25 +31,7 @@ partial class FormManageShift
     /// </summary>
     private void InitializeComponent()
     {
-        dgv_danhSachCa = new System.Windows.Forms.DataGridView();
-        btn_moCa = new System.Windows.Forms.Button();
-        button5 = new System.Windows.Forms.Button();
-        btn_chotCa = new System.Windows.Forms.Button();
-        panel1 = new System.Windows.Forms.Panel();
-        lbl_trangThaiTitle = new System.Windows.Forms.Label();
-        label1 = new System.Windows.Forms.Label();
-        panel2 = new System.Windows.Forms.Panel();
-        lbl_gioMoCa = new System.Windows.Forms.Label();
-        lbl_gioMoCaTitle = new System.Windows.Forms.Label();
-        panel3 = new System.Windows.Forms.Panel();
-        lbl_tienDauca = new System.Windows.Forms.Label();
-        lbl_tienDaucaTitle = new System.Windows.Forms.Label();
-        panel4 = new System.Windows.Forms.Panel();
-        lbl_hdTrongca = new System.Windows.Forms.Label();
-        lbl_hdTrongcaTitle = new System.Windows.Forms.Label();
-        panel5 = new System.Windows.Forms.Panel();
-        lbl_doanhThuca = new System.Windows.Forms.Label();
-        lbl_doanhThucaTitle = new System.Windows.Forms.Label();
+        dgv_listShift = new System.Windows.Forms.DataGridView();
         col_maCa = new System.Windows.Forms.DataGridViewTextBoxColumn();
         col_nhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
         col_moLuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,197 +40,51 @@ partial class FormManageShift
         col_tienCuoica = new System.Windows.Forms.DataGridViewTextBoxColumn();
         col_chenhLech = new System.Windows.Forms.DataGridViewTextBoxColumn();
         col_trangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        btn_shiftOpen = new System.Windows.Forms.Button();
+        btn_shiftHistory = new System.Windows.Forms.Button();
+        btn_shiftStop = new System.Windows.Forms.Button();
+        panel1 = new System.Windows.Forms.Panel();
+        lbl_shiftStatus = new System.Windows.Forms.Label();
+        lbl_resStatus = new System.Windows.Forms.Label();
+        panel2 = new System.Windows.Forms.Panel();
+        lbl_shiftOpenTime = new System.Windows.Forms.Label();
+        lbl_resTime = new System.Windows.Forms.Label();
+        panel3 = new System.Windows.Forms.Panel();
+        lbl_shiftStartMoney = new System.Windows.Forms.Label();
+        lbl_resMoney = new System.Windows.Forms.Label();
+        panel4 = new System.Windows.Forms.Panel();
+        lbl_shiftActivity = new System.Windows.Forms.Label();
+        lbl_resActivity = new System.Windows.Forms.Label();
+        panel5 = new System.Windows.Forms.Panel();
+        lbl_shiftRevenue = new System.Windows.Forms.Label();
+        lbl_resRevenue = new System.Windows.Forms.Label();
         pnl_footer = new System.Windows.Forms.Panel();
-        lbl_footerLeft = new System.Windows.Forms.Label();
         lbl_footerRight = new System.Windows.Forms.Label();
-        ((System.ComponentModel.ISupportInitialize)dgv_danhSachCa).BeginInit();
+        lbl_footerLeft = new System.Windows.Forms.Label();
+        pnl_top = new System.Windows.Forms.Panel();
+        groupBox1 = new System.Windows.Forms.GroupBox();
+        ((System.ComponentModel.ISupportInitialize)dgv_listShift).BeginInit();
         panel1.SuspendLayout();
         panel2.SuspendLayout();
         panel3.SuspendLayout();
         panel4.SuspendLayout();
         panel5.SuspendLayout();
         pnl_footer.SuspendLayout();
+        pnl_top.SuspendLayout();
+        groupBox1.SuspendLayout();
         SuspendLayout();
         // 
-        // dgv_danhSachCa
+        // dgv_listShift
         // 
-        dgv_danhSachCa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        dgv_danhSachCa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dgv_danhSachCa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { col_maCa, col_nhanVien, col_moLuc, col_dongLuc, col_tienDauca, col_tienCuoica, col_chenhLech, col_trangThai });
-        dgv_danhSachCa.Location = new System.Drawing.Point(12, 247);
-        dgv_danhSachCa.Name = "dgv_danhSachCa";
-        dgv_danhSachCa.RowHeadersWidth = 51;
-        dgv_danhSachCa.Size = new System.Drawing.Size(1048, 302);
-        dgv_danhSachCa.TabIndex = 0;
-        dgv_danhSachCa.Text = "dataGridView1";
-        // 
-        // btn_moCa
-        // 
-        btn_moCa.Location = new System.Drawing.Point(13, 20);
-        btn_moCa.Name = "btn_moCa";
-        btn_moCa.Size = new System.Drawing.Size(133, 57);
-        btn_moCa.TabIndex = 5;
-        btn_moCa.Text = "▶ Mở ca";
-        btn_moCa.UseVisualStyleBackColor = true;
-        // 
-        // button5
-        // 
-        button5.Location = new System.Drawing.Point(326, 20);
-        button5.Name = "button5";
-        button5.Size = new System.Drawing.Size(133, 57);
-        button5.TabIndex = 6;
-        button5.Text = "📋Lịch sử ca";
-        button5.UseVisualStyleBackColor = true;
-        // 
-        // btn_chotCa
-        // 
-        btn_chotCa.Location = new System.Drawing.Point(172, 20);
-        btn_chotCa.Name = "btn_chotCa";
-        btn_chotCa.Size = new System.Drawing.Size(133, 57);
-        btn_chotCa.TabIndex = 7;
-        btn_chotCa.Text = "■ Chốt ca";
-        btn_chotCa.UseVisualStyleBackColor = true;
-        // 
-        // panel1
-        // 
-        panel1.Controls.Add(lbl_trangThaiTitle);
-        panel1.Controls.Add(label1);
-        panel1.Location = new System.Drawing.Point(30, 117);
-        panel1.Name = "panel1";
-        panel1.Size = new System.Drawing.Size(150, 84);
-        panel1.TabIndex = 8;
-        // 
-        // lbl_trangThaiTitle
-        // 
-        lbl_trangThaiTitle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        lbl_trangThaiTitle.Location = new System.Drawing.Point(13, 41);
-        lbl_trangThaiTitle.Name = "lbl_trangThaiTitle";
-        lbl_trangThaiTitle.Size = new System.Drawing.Size(111, 26);
-        lbl_trangThaiTitle.TabIndex = 1;
-        lbl_trangThaiTitle.Text = "Trạng thái ca";
-        lbl_trangThaiTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        lbl_trangThaiTitle.Click += label2_Click_1;
-        // 
-        // label1
-        // 
-        label1.Location = new System.Drawing.Point(13, 11);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(111, 30);
-        label1.TabIndex = 0;
-        label1.Text = "Đang mở";
-        label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // panel2
-        // 
-        panel2.Controls.Add(lbl_gioMoCa);
-        panel2.Controls.Add(lbl_gioMoCaTitle);
-        panel2.Location = new System.Drawing.Point(234, 117);
-        panel2.Name = "panel2";
-        panel2.Size = new System.Drawing.Size(157, 84);
-        panel2.TabIndex = 9;
-        // 
-        //  lbl_gioMoCa
-        // 
-        lbl_gioMoCa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        lbl_gioMoCa.Location = new System.Drawing.Point(26, 41);
-        lbl_gioMoCa.Name = " lbl_gioMoCa";
-        lbl_gioMoCa.Size = new System.Drawing.Size(111, 26);
-        lbl_gioMoCa.TabIndex = 1;
-        lbl_gioMoCa.Text = "Giờ mở ca";
-        lbl_gioMoCa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        //  lbl_gioMoCaTitle
-        // 
-        lbl_gioMoCaTitle.Location = new System.Drawing.Point(26, 11);
-        lbl_gioMoCaTitle.Name = " lbl_gioMoCaTitle";
-        lbl_gioMoCaTitle.Size = new System.Drawing.Size(111, 30);
-        lbl_gioMoCaTitle.TabIndex = 0;
-        lbl_gioMoCaTitle.Text = "7:00";
-        lbl_gioMoCaTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // panel3
-        // 
-        panel3.Controls.Add(lbl_tienDauca);
-        panel3.Controls.Add(lbl_tienDaucaTitle);
-        panel3.Location = new System.Drawing.Point(429, 117);
-        panel3.Name = "panel3";
-        panel3.Size = new System.Drawing.Size(157, 84);
-        panel3.TabIndex = 10;
-        // 
-        // lbl_tienDauca
-        // 
-        lbl_tienDauca.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        lbl_tienDauca.Location = new System.Drawing.Point(26, 41);
-        lbl_tienDauca.Name = "lbl_tienDauca";
-        lbl_tienDauca.Size = new System.Drawing.Size(111, 26);
-        lbl_tienDauca.TabIndex = 1;
-        lbl_tienDauca.Text = "Tiền đầu ca";
-        lbl_tienDauca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // lbl_tienDaucaTitle
-        // 
-        lbl_tienDaucaTitle.Location = new System.Drawing.Point(26, 11);
-        lbl_tienDaucaTitle.Name = "lbl_tienDaucaTitle";
-        lbl_tienDaucaTitle.Size = new System.Drawing.Size(111, 30);
-        lbl_tienDaucaTitle.TabIndex = 0;
-        lbl_tienDaucaTitle.Text = "1.000.000";
-        lbl_tienDaucaTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // panel4
-        // 
-        panel4.Controls.Add(lbl_hdTrongca);
-        panel4.Controls.Add(lbl_hdTrongcaTitle);
-        panel4.Location = new System.Drawing.Point(651, 117);
-        panel4.Name = "panel4";
-        panel4.Size = new System.Drawing.Size(157, 84);
-        panel4.TabIndex = 11;
-        // 
-        // lbl_hdTrongca
-        // 
-        lbl_hdTrongca.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        lbl_hdTrongca.Location = new System.Drawing.Point(26, 41);
-        lbl_hdTrongca.Name = "lbl_hdTrongca";
-        lbl_hdTrongca.Size = new System.Drawing.Size(111, 26);
-        lbl_hdTrongca.TabIndex = 1;
-        lbl_hdTrongca.Text = "HĐ trong ca";
-        lbl_hdTrongca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // lbl_hdTrongcaTitle
-        // 
-        lbl_hdTrongcaTitle.Location = new System.Drawing.Point(26, 11);
-        lbl_hdTrongcaTitle.Name = "lbl_hdTrongcaTitle";
-        lbl_hdTrongcaTitle.Size = new System.Drawing.Size(111, 30);
-        lbl_hdTrongcaTitle.TabIndex = 0;
-        lbl_hdTrongcaTitle.Text = "10";
-        lbl_hdTrongcaTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // panel5
-        // 
-        panel5.Controls.Add(lbl_doanhThuca);
-        panel5.Controls.Add(lbl_doanhThucaTitle);
-        panel5.Location = new System.Drawing.Point(870, 117);
-        panel5.Name = "panel5";
-        panel5.Size = new System.Drawing.Size(157, 84);
-        panel5.TabIndex = 12;
-        // 
-        // lbl_doanhThuca
-        // 
-        lbl_doanhThuca.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        lbl_doanhThuca.Location = new System.Drawing.Point(26, 41);
-        lbl_doanhThuca.Name = "lbl_doanhThuca";
-        lbl_doanhThuca.Size = new System.Drawing.Size(111, 26);
-        lbl_doanhThuca.TabIndex = 1;
-        lbl_doanhThuca.Text = "Doanh thu ca";
-        lbl_doanhThuca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // lbl_doanhThucaTitle
-        // 
-        lbl_doanhThucaTitle.Location = new System.Drawing.Point(26, 11);
-        lbl_doanhThucaTitle.Name = "lbl_doanhThucaTitle";
-        lbl_doanhThucaTitle.Size = new System.Drawing.Size(111, 30);
-        lbl_doanhThucaTitle.TabIndex = 0;
-        lbl_doanhThucaTitle.Text = "50.000.000";
-        lbl_doanhThucaTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        dgv_listShift.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        dgv_listShift.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgv_listShift.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { col_maCa, col_nhanVien, col_moLuc, col_dongLuc, col_tienDauca, col_tienCuoica, col_chenhLech, col_trangThai });
+        dgv_listShift.Location = new System.Drawing.Point(2, 280);
+        dgv_listShift.Name = "dgv_listShift";
+        dgv_listShift.RowHeadersWidth = 51;
+        dgv_listShift.Size = new System.Drawing.Size(1804, 652);
+        dgv_listShift.TabIndex = 0;
+        dgv_listShift.Text = "dataGridView1";
         // 
         // col_maCa
         // 
@@ -306,59 +142,256 @@ partial class FormManageShift
         col_trangThai.Name = "col_trangThai";
         col_trangThai.Width = 125;
         // 
+        // btn_shiftOpen
+        // 
+        btn_shiftOpen.Location = new System.Drawing.Point(9, 23);
+        btn_shiftOpen.Name = "btn_shiftOpen";
+        btn_shiftOpen.Size = new System.Drawing.Size(608, 57);
+        btn_shiftOpen.TabIndex = 5;
+        btn_shiftOpen.Text = "▶ Mở ca";
+        btn_shiftOpen.UseVisualStyleBackColor = true;
+        // 
+        // btn_shiftHistory
+        // 
+        btn_shiftHistory.Location = new System.Drawing.Point(1229, 23);
+        btn_shiftHistory.Name = "btn_shiftHistory";
+        btn_shiftHistory.Size = new System.Drawing.Size(560, 57);
+        btn_shiftHistory.TabIndex = 6;
+        btn_shiftHistory.Text = "📋Lịch sử ca";
+        btn_shiftHistory.UseVisualStyleBackColor = true;
+        // 
+        // btn_shiftStop
+        // 
+        btn_shiftStop.Location = new System.Drawing.Point(623, 23);
+        btn_shiftStop.Name = "btn_shiftStop";
+        btn_shiftStop.Size = new System.Drawing.Size(600, 57);
+        btn_shiftStop.TabIndex = 7;
+        btn_shiftStop.Text = "■ Chốt ca";
+        btn_shiftStop.UseVisualStyleBackColor = true;
+        // 
+        // panel1
+        // 
+        panel1.Controls.Add(lbl_shiftStatus);
+        panel1.Controls.Add(lbl_resStatus);
+        panel1.Location = new System.Drawing.Point(6, 27);
+        panel1.Name = "panel1";
+        panel1.Size = new System.Drawing.Size(377, 139);
+        panel1.TabIndex = 8;
+        // 
+        // lbl_shiftStatus
+        // 
+        lbl_shiftStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_shiftStatus.Location = new System.Drawing.Point(4, 71);
+        lbl_shiftStatus.Name = "lbl_shiftStatus";
+        lbl_shiftStatus.Size = new System.Drawing.Size(370, 48);
+        lbl_shiftStatus.TabIndex = 1;
+        lbl_shiftStatus.Text = "Trạng thái ca";
+        lbl_shiftStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        lbl_shiftStatus.Click += label2_Click_1;
+        // 
+        // lbl_resStatus
+        // 
+        lbl_resStatus.BackColor = System.Drawing.SystemColors.ControlLight;
+        lbl_resStatus.Location = new System.Drawing.Point(4, 10);
+        lbl_resStatus.Name = "lbl_resStatus";
+        lbl_resStatus.Size = new System.Drawing.Size(370, 46);
+        lbl_resStatus.TabIndex = 0;
+        lbl_resStatus.Text = "Đang mở";
+        lbl_resStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // panel2
+        // 
+        panel2.Controls.Add(lbl_shiftOpenTime);
+        panel2.Controls.Add(lbl_resTime);
+        panel2.Location = new System.Drawing.Point(389, 27);
+        panel2.Name = "panel2";
+        panel2.Size = new System.Drawing.Size(348, 133);
+        panel2.TabIndex = 9;
+        // 
+        // lbl_shiftOpenTime
+        // 
+        lbl_shiftOpenTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_shiftOpenTime.Location = new System.Drawing.Point(3, 71);
+        lbl_shiftOpenTime.Name = "lbl_shiftOpenTime";
+        lbl_shiftOpenTime.Size = new System.Drawing.Size(342, 48);
+        lbl_shiftOpenTime.TabIndex = 1;
+        lbl_shiftOpenTime.Text = "Giờ mở ca";
+        lbl_shiftOpenTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // lbl_resTime
+        // 
+        lbl_resTime.BackColor = System.Drawing.SystemColors.ControlLight;
+        lbl_resTime.Location = new System.Drawing.Point(3, 10);
+        lbl_resTime.Name = "lbl_resTime";
+        lbl_resTime.Size = new System.Drawing.Size(342, 46);
+        lbl_resTime.TabIndex = 0;
+        lbl_resTime.Text = "7:00";
+        lbl_resTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // panel3
+        // 
+        panel3.Controls.Add(lbl_shiftStartMoney);
+        panel3.Controls.Add(lbl_resMoney);
+        panel3.Location = new System.Drawing.Point(743, 27);
+        panel3.Name = "panel3";
+        panel3.Size = new System.Drawing.Size(374, 133);
+        panel3.TabIndex = 10;
+        // 
+        // lbl_shiftStartMoney
+        // 
+        lbl_shiftStartMoney.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_shiftStartMoney.Location = new System.Drawing.Point(3, 71);
+        lbl_shiftStartMoney.Name = "lbl_shiftStartMoney";
+        lbl_shiftStartMoney.Size = new System.Drawing.Size(368, 48);
+        lbl_shiftStartMoney.TabIndex = 1;
+        lbl_shiftStartMoney.Text = "Tiền đầu ca";
+        lbl_shiftStartMoney.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // lbl_resMoney
+        // 
+        lbl_resMoney.BackColor = System.Drawing.SystemColors.ControlLight;
+        lbl_resMoney.Location = new System.Drawing.Point(3, 10);
+        lbl_resMoney.Name = "lbl_resMoney";
+        lbl_resMoney.Size = new System.Drawing.Size(368, 46);
+        lbl_resMoney.TabIndex = 0;
+        lbl_resMoney.Text = "1.000.000";
+        lbl_resMoney.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        lbl_resMoney.Click += lbl_tienDaucaTitle_Click;
+        // 
+        // panel4
+        // 
+        panel4.Controls.Add(lbl_shiftActivity);
+        panel4.Controls.Add(lbl_resActivity);
+        panel4.Location = new System.Drawing.Point(1123, 27);
+        panel4.Name = "panel4";
+        panel4.Size = new System.Drawing.Size(329, 133);
+        panel4.TabIndex = 11;
+        // 
+        // lbl_shiftActivity
+        // 
+        lbl_shiftActivity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_shiftActivity.Location = new System.Drawing.Point(3, 71);
+        lbl_shiftActivity.Name = "lbl_shiftActivity";
+        lbl_shiftActivity.Size = new System.Drawing.Size(323, 48);
+        lbl_shiftActivity.TabIndex = 1;
+        lbl_shiftActivity.Text = "HĐ trong ca";
+        lbl_shiftActivity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // lbl_resActivity
+        // 
+        lbl_resActivity.BackColor = System.Drawing.SystemColors.ControlLight;
+        lbl_resActivity.Location = new System.Drawing.Point(3, 10);
+        lbl_resActivity.Name = "lbl_resActivity";
+        lbl_resActivity.Size = new System.Drawing.Size(323, 46);
+        lbl_resActivity.TabIndex = 0;
+        lbl_resActivity.Text = "10";
+        lbl_resActivity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // panel5
+        // 
+        panel5.Controls.Add(lbl_shiftRevenue);
+        panel5.Controls.Add(lbl_resRevenue);
+        panel5.Location = new System.Drawing.Point(1458, 27);
+        panel5.Name = "panel5";
+        panel5.Size = new System.Drawing.Size(332, 133);
+        panel5.TabIndex = 12;
+        // 
+        // lbl_shiftRevenue
+        // 
+        lbl_shiftRevenue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_shiftRevenue.Location = new System.Drawing.Point(3, 71);
+        lbl_shiftRevenue.Name = "lbl_shiftRevenue";
+        lbl_shiftRevenue.Size = new System.Drawing.Size(331, 48);
+        lbl_shiftRevenue.TabIndex = 1;
+        lbl_shiftRevenue.Text = "Doanh thu ca";
+        lbl_shiftRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // lbl_resRevenue
+        // 
+        lbl_resRevenue.BackColor = System.Drawing.SystemColors.ControlLight;
+        lbl_resRevenue.Location = new System.Drawing.Point(3, 11);
+        lbl_resRevenue.Name = "lbl_resRevenue";
+        lbl_resRevenue.Size = new System.Drawing.Size(331, 45);
+        lbl_resRevenue.TabIndex = 0;
+        lbl_resRevenue.Text = "50.000.000";
+        lbl_resRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
         // pnl_footer
         // 
         pnl_footer.Controls.Add(lbl_footerRight);
         pnl_footer.Controls.Add(lbl_footerLeft);
-        pnl_footer.Location = new System.Drawing.Point(27, 554);
+        pnl_footer.Location = new System.Drawing.Point(2, 938);
         pnl_footer.Name = "pnl_footer";
-        pnl_footer.Size = new System.Drawing.Size(1033, 40);
+        pnl_footer.Size = new System.Drawing.Size(1804, 51);
         pnl_footer.TabIndex = 13;
+        // 
+        // lbl_footerRight
+        // 
+        lbl_footerRight.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_footerRight.Location = new System.Drawing.Point(879, 3);
+        lbl_footerRight.Name = "lbl_footerRight";
+        lbl_footerRight.Size = new System.Drawing.Size(911, 48);
+        lbl_footerRight.TabIndex = 1;
+        lbl_footerRight.Text = "Mở lúc:";
         // 
         // lbl_footerLeft
         // 
         lbl_footerLeft.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
         lbl_footerLeft.Location = new System.Drawing.Point(1, 3);
         lbl_footerLeft.Name = "lbl_footerLeft";
-        lbl_footerLeft.Size = new System.Drawing.Size(104, 36);
+        lbl_footerLeft.Size = new System.Drawing.Size(872, 48);
         lbl_footerLeft.TabIndex = 0;
         lbl_footerLeft.Text = "Ca hiện tại:";
         lbl_footerLeft.Click += label2_Click_2;
         // 
-        // lbl_footerRight
+        // pnl_top
         // 
-        lbl_footerRight.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        lbl_footerRight.Location = new System.Drawing.Point(929, 0);
-        lbl_footerRight.Name = "lbl_footerRight";
-        lbl_footerRight.Size = new System.Drawing.Size(104, 36);
-        lbl_footerRight.TabIndex = 1;
-        lbl_footerRight.Text = "Mở lúc:";
+        pnl_top.Controls.Add(btn_shiftOpen);
+        pnl_top.Controls.Add(btn_shiftStop);
+        pnl_top.Controls.Add(btn_shiftHistory);
+        pnl_top.Location = new System.Drawing.Point(3, 11);
+        pnl_top.Name = "pnl_top";
+        pnl_top.Size = new System.Drawing.Size(1797, 91);
+        pnl_top.TabIndex = 14;
+        // 
+        // groupBox1
+        // 
+        groupBox1.Controls.Add(panel1);
+        groupBox1.Controls.Add(panel3);
+        groupBox1.Controls.Add(panel2);
+        groupBox1.Controls.Add(panel5);
+        groupBox1.Controls.Add(panel4);
+        groupBox1.Location = new System.Drawing.Point(2, 108);
+        groupBox1.Name = "groupBox1";
+        groupBox1.Size = new System.Drawing.Size(1803, 166);
+        groupBox1.TabIndex = 15;
+        groupBox1.TabStop = false;
         // 
         // FormManageShift
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+        AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(1072, 606);
+        ClientSize = new System.Drawing.Size(1804, 989);
+        Controls.Add(groupBox1);
+        Controls.Add(pnl_top);
         Controls.Add(pnl_footer);
-        Controls.Add(panel5);
-        Controls.Add(panel4);
-        Controls.Add(panel3);
-        Controls.Add(panel2);
-        Controls.Add(panel1);
-        Controls.Add(btn_chotCa);
-        Controls.Add(button5);
-        Controls.Add(btn_moCa);
-        Controls.Add(dgv_danhSachCa);
+        Controls.Add(dgv_listShift);
+        Margin = new System.Windows.Forms.Padding(6);
         Text = "Quản lí ca làm việc";
-        ((System.ComponentModel.ISupportInitialize)dgv_danhSachCa).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgv_listShift).EndInit();
         panel1.ResumeLayout(false);
         panel2.ResumeLayout(false);
         panel3.ResumeLayout(false);
         panel4.ResumeLayout(false);
         panel5.ResumeLayout(false);
         pnl_footer.ResumeLayout(false);
+        pnl_top.ResumeLayout(false);
+        groupBox1.ResumeLayout(false);
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Panel pnl_top;
+    private System.Windows.Forms.GroupBox groupBox1;
 
     private System.Windows.Forms.Panel pnl_footer;
 
@@ -374,31 +407,31 @@ partial class FormManageShift
     private System.Windows.Forms.DataGridViewTextBoxColumn col_maCa;
 
     private System.Windows.Forms.Panel panel2;
-    private System.Windows.Forms.Label lbl_gioMoCa;
-    private System.Windows.Forms.Label lbl_gioMoCaTitle;
+    private System.Windows.Forms.Label lbl_shiftOpenTime;
+    private System.Windows.Forms.Label lbl_resTime;
     private System.Windows.Forms.Label lbl_footerLeft;
     private System.Windows.Forms.Label lbl_footerRight;
     private System.Windows.Forms.Panel panel3;
-    private System.Windows.Forms.Label lbl_tienDauca;
-    private System.Windows.Forms.Label lbl_tienDaucaTitle;
+    private System.Windows.Forms.Label lbl_shiftStartMoney;
+    private System.Windows.Forms.Label lbl_resMoney;
     private System.Windows.Forms.Panel panel4;
-    private System.Windows.Forms.Label lbl_hdTrongca;
-    private System.Windows.Forms.Label lbl_hdTrongcaTitle;
+    private System.Windows.Forms.Label lbl_shiftActivity;
+    private System.Windows.Forms.Label lbl_resActivity;
     private System.Windows.Forms.Panel panel5;
-    private System.Windows.Forms.Label lbl_doanhThuca;
-    private System.Windows.Forms.Label lbl_doanhThucaTitle;
+    private System.Windows.Forms.Label lbl_shiftRevenue;
+    private System.Windows.Forms.Label lbl_resRevenue;
 
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.Label lbl_trangThaiTitle;
+    private System.Windows.Forms.Label lbl_resStatus;
+    private System.Windows.Forms.Label lbl_shiftStatus;
 
     private System.Windows.Forms.Panel panel1;
 
-    private System.Windows.Forms.Button button5;
-    private System.Windows.Forms.Button btn_chotCa;
+    private System.Windows.Forms.Button btn_shiftHistory;
+    private System.Windows.Forms.Button btn_shiftStop;
 
-    private System.Windows.Forms.Button btn_moCa;
+    private System.Windows.Forms.Button btn_shiftOpen;
 
-    private System.Windows.Forms.DataGridView dgv_danhSachCa;
+    private System.Windows.Forms.DataGridView dgv_listShift;
 
     #endregion
 }

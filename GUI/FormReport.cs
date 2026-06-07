@@ -29,46 +29,46 @@ public partial class FormReport : Form
     private void UpdateCards()
     {
         lbl_doanhThu.Text         = "145,200,000\nDoanh thu (đ)";
-        lbl_loiNhuangop.Text      = "42,300,000\nLợi nhuận gộp (đ)";
-        lbl_soHoadon.Text         = "12\nSố hóa đơn";
-        lbl_sanPhambanra.Text     = "18\nSản phẩm bán ra";
-        lbl_baoHanhphatsinh.Text  = "3\nBảo hành phát sinh";
+        lbl_grossProfit.Text      = "42,300,000\nLợi nhuận gộp (đ)";
+        lbl_invoiceNum.Text         = "12\nSố hóa đơn";
+        lbl_productSold.Text     = "18\nSản phẩm bán ra";
+        lbl_warranty.Text  = "3\nBảo hành phát sinh";
 
         lbl_doanhThu.ForeColor        = Color.FromArgb(0, 102, 204);
-        lbl_loiNhuangop.ForeColor     = Color.FromArgb(0, 140, 0);
-        lbl_baoHanhphatsinh.ForeColor = Color.FromArgb(200, 100, 0);
+        lbl_grossProfit.ForeColor     = Color.FromArgb(0, 140, 0);
+        lbl_warranty.ForeColor = Color.FromArgb(200, 100, 0);
 
         lbl_doanhThu.TextAlign        = ContentAlignment.MiddleCenter;
-        lbl_loiNhuangop.TextAlign     = ContentAlignment.MiddleCenter;
-        lbl_soHoadon.TextAlign        = ContentAlignment.MiddleCenter;
-        lbl_sanPhambanra.TextAlign    = ContentAlignment.MiddleCenter;
-        lbl_baoHanhphatsinh.TextAlign = ContentAlignment.MiddleCenter;
+        lbl_grossProfit.TextAlign     = ContentAlignment.MiddleCenter;
+        lbl_invoiceNum.TextAlign        = ContentAlignment.MiddleCenter;
+        lbl_productSold.TextAlign    = ContentAlignment.MiddleCenter;
+        lbl_warranty.TextAlign = ContentAlignment.MiddleCenter;
 
         lbl_doanhThu.Font        = new Font("Segoe UI", 9F, FontStyle.Bold);
-        lbl_loiNhuangop.Font     = new Font("Segoe UI", 9F, FontStyle.Bold);
-        lbl_soHoadon.Font        = new Font("Segoe UI", 9F, FontStyle.Bold);
-        lbl_sanPhambanra.Font    = new Font("Segoe UI", 9F, FontStyle.Bold);
-        lbl_baoHanhphatsinh.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        lbl_grossProfit.Font     = new Font("Segoe UI", 9F, FontStyle.Bold);
+        lbl_invoiceNum.Font        = new Font("Segoe UI", 9F, FontStyle.Bold);
+        lbl_productSold.Font    = new Font("Segoe UI", 9F, FontStyle.Bold);
+        lbl_warranty.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
     }
 
     private void LoadTable()
     {
-        dgv_danhSachHD.Rows.Clear();
-        dgv_danhSachHD.RowHeadersVisible  = false;
-        dgv_danhSachHD.AllowUserToAddRows = false;
-        dgv_danhSachHD.ReadOnly           = true;
-        dgv_danhSachHD.SelectionMode      = DataGridViewSelectionMode.FullRowSelect;
-        dgv_danhSachHD.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 248, 255);
+        dgv_listInvoices.Rows.Clear();
+        dgv_listInvoices.RowHeadersVisible  = false;
+        dgv_listInvoices.AllowUserToAddRows = false;
+        dgv_listInvoices.ReadOnly           = true;
+        dgv_listInvoices.SelectionMode      = DataGridViewSelectionMode.FullRowSelect;
+        dgv_listInvoices.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 248, 255);
 
         foreach (var r in _reportList)
         {
-            int i = dgv_danhSachHD.Rows.Add(
+            int i = dgv_listInvoices.Rows.Add(
                 r.InvoiceCode, r.SaleTime, r.CustomerName, r.ProductName,
                 string.Format("{0:N0}", r.Revenue),
                 string.Format("{0:N0}", r.Profit),
                 r.PaymentMethod
             );
-            var payCell = dgv_danhSachHD.Rows[i].Cells["col_thanhToan"];
+            var payCell = dgv_listInvoices.Rows[i].Cells["col_thanhToan"];
             if (r.PaymentMethod == "Tiền mặt")
             { payCell.Style.BackColor = Color.FromArgb(0, 140, 0);   payCell.Style.ForeColor = Color.White; }
             else

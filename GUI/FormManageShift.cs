@@ -30,27 +30,27 @@ public partial class FormManageShift : Form
 
     private void UpdateCards()
     {
-        label1.Text              = _isShiftOpen ? "Đang mở" : "Đã đóng";
-        label1.ForeColor         = _isShiftOpen ? Color.FromArgb(0, 140, 0) : Color.Red;
-        lbl_gioMoCaTitle.Text    = "08:00";
-        lbl_tienDaucaTitle.Text  = "500,000";
-        lbl_hdTrongcaTitle.Text  = "12";
-        lbl_doanhThucaTitle.Text = "145,200,000";
-        lbl_doanhThucaTitle.ForeColor = Color.FromArgb(0, 102, 204);
+        lbl_resStatus.Text              = _isShiftOpen ? "Đang mở" : "Đã đóng";
+        lbl_resStatus.ForeColor         = _isShiftOpen ? Color.FromArgb(0, 140, 0) : Color.Red;
+        lbl_resTime.Text    = "08:00";
+        lbl_resMoney.Text  = "500,000";
+        lbl_resActivity.Text  = "12";
+        lbl_resRevenue.Text = "145,200,000";
+        lbl_resRevenue.ForeColor = Color.FromArgb(0, 102, 204);
     }
 
     private void LoadTable()
     {
-        dgv_danhSachCa.Rows.Clear();
-        dgv_danhSachCa.RowHeadersVisible  = false;
-        dgv_danhSachCa.AllowUserToAddRows = false;
-        dgv_danhSachCa.ReadOnly           = true;
-        dgv_danhSachCa.SelectionMode      = DataGridViewSelectionMode.FullRowSelect;
-        dgv_danhSachCa.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 248, 255);
+        dgv_listShift.Rows.Clear();
+        dgv_listShift.RowHeadersVisible  = false;
+        dgv_listShift.AllowUserToAddRows = false;
+        dgv_listShift.ReadOnly           = true;
+        dgv_listShift.SelectionMode      = DataGridViewSelectionMode.FullRowSelect;
+        dgv_listShift.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 248, 255);
 
         foreach (var s in _shiftList)
         {
-            int i = dgv_danhSachCa.Rows.Add(
+            int i = dgv_listShift.Rows.Add(
                 s.MaCa, s.NhanVien, s.MoLuc, s.DongLuc,
                 string.Format("{0:N0}", s.TienDau),
                 s.TienCuoi > 0 ? string.Format("{0:N0}", s.TienCuoi) : "—",
@@ -58,13 +58,13 @@ public partial class FormManageShift : Form
                 s.TrangThai
             );
 
-            var ttCell = dgv_danhSachCa.Rows[i].Cells["col_trangThai"];
+            var ttCell = dgv_listShift.Rows[i].Cells["col_trangThai"];
             if (s.TrangThai == "Đang mở")
             { ttCell.Style.BackColor = Color.FromArgb(0, 102, 204); ttCell.Style.ForeColor = Color.White; }
             else
             { ttCell.Style.BackColor = Color.FromArgb(100, 100, 100); ttCell.Style.ForeColor = Color.White; }
 
-            var clCell = dgv_danhSachCa.Rows[i].Cells["col_chenhLech"];
+            var clCell = dgv_listShift.Rows[i].Cells["col_chenhLech"];
             if (s.ChenhLech > 0) clCell.Style.ForeColor = Color.Green;
             else if (s.ChenhLech < 0) clCell.Style.ForeColor = Color.Red;
         }
@@ -110,6 +110,11 @@ public partial class FormManageShift : Form
 
     private void label2_Click_1(object sender, EventArgs e) { }
     private void label2_Click_2(object sender, EventArgs e) { }
+
+    private void lbl_tienDaucaTitle_Click(object sender, EventArgs e)
+    {
+        
+    }
 }
 
 public class ShiftRecord

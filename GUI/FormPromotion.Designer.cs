@@ -323,7 +323,7 @@ partial class FormPromotion
         Load += FormPromotion_Load;
         groupBox1.ResumeLayout(false);
         groupBox1.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)num_Discount).EndInit();
+        //((System.ComponentModel.ISupportInitialize)num_Discount).EndInit();
         ((System.ComponentModel.ISupportInitialize)dgv_Promotion).EndInit();
         ResumeLayout(false);
     }
