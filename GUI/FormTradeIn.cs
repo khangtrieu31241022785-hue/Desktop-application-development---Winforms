@@ -23,39 +23,39 @@ public partial class FormTradeIn : Form
     private void FormTradeIn_Load(object sender, EventArgs e)
     {
         SetupDataGridView();
-        cboReason.Items.Clear();
-        cboReason.Items.AddRange(new string[] { "Sản phẩm lỗi do NSX", "Thu cũ đổi mới", "Khách đổi ý (Có tính phí)", "Khác..." });
-        cboReason.SelectedIndex = 0;
+        txb_reason.Items.Clear();
+        txb_reason.Items.AddRange(new string[] { "Sản phẩm lỗi do NSX", "Thu cũ đổi mới", "Khách đổi ý (Có tính phí)", "Khác..." });
+        txb_reason.SelectedIndex = 0;
         SetTradeInPanelState(false);
     }
 
     private void SetupDataGridView()
     {
-        dgvInvoiceDetails.Columns.Clear();
-        dgvInvoiceDetails.AutoGenerateColumns = false;
-        dgvInvoiceDetails.AllowUserToAddRows = false;
-        dgvInvoiceDetails.RowHeadersVisible = false;
-        dgvInvoiceDetails.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        dgv_invoiceDetails.Columns.Clear();
+        dgv_invoiceDetails.AutoGenerateColumns = false;
+        dgv_invoiceDetails.AllowUserToAddRows = false;
+        dgv_invoiceDetails.RowHeadersVisible = false;
+        dgv_invoiceDetails.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-        dgvInvoiceDetails.Columns.Add(new DataGridViewCheckBoxColumn { HeaderText = "Chọn", Name = "chkSelect", Width = 50 });
-        dgvInvoiceDetails.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "ItemCode", HeaderText = "Mã Serial", Name = "ItemCode", Width = 120, ReadOnly = true });
-        dgvInvoiceDetails.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "ProductName", HeaderText = "Tên Sản Phẩm", Name = "ProductName", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, ReadOnly = true });
-        dgvInvoiceDetails.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "UnitPrice", HeaderText = "Giá Bán", Name = "UnitPrice", Width = 100, ReadOnly = true });
+        dgv_invoiceDetails.Columns.Add(new DataGridViewCheckBoxColumn { HeaderText = "Chọn", Name = "chkSelect", Width = 50 });
+        dgv_invoiceDetails.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "ItemCode", HeaderText = "Mã Serial", Name = "ItemCode", Width = 120, ReadOnly = true });
+        dgv_invoiceDetails.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "ProductName", HeaderText = "Tên Sản Phẩm", Name = "ProductName", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, ReadOnly = true });
+        dgv_invoiceDetails.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "UnitPrice", HeaderText = "Giá Bán", Name = "UnitPrice", Width = 100, ReadOnly = true });
     }
 
     private void SetTradeInPanelState(bool isEnabled)
     {
-        cboReason.Enabled = isEnabled;
-        rtbTradeInNote.Enabled = isEnabled;
-        txtRefundAmount.Enabled = isEnabled;
-        btnConfirm.Enabled = isEnabled;
-        btnCreateTradeIn.Enabled = isEnabled;
+        txb_reason.Enabled = isEnabled;
+        rtb_tradeInNote.Enabled = isEnabled;
+        txt_refundAmount.Enabled = isEnabled;
+        btn_confirmTradeIn.Enabled = isEnabled;
+        btn_createTradeIn.Enabled = isEnabled;
     }
 
     // --- LOGIC GỌI DATABASE THẬT ---
     private void btnSearch_Click(object sender, EventArgs e)
     {
-        string invoiceCode = txtInvoiceCode.Text.Trim();
+        string invoiceCode = txt_invoiceCode.Text.Trim();
         if (string.IsNullOrEmpty(invoiceCode))
         {
             MessageBox.Show("Vui lòng nhập Mã Hóa Đơn!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -73,10 +73,10 @@ public partial class FormTradeIn : Form
                 _currentCustomerID = invoice.CustomerID ?? 0;
                 
                 var customer = _customerBUS.GetById(_currentCustomerID);
-                txtCustomerName.Text = customer != null ? customer.FullName : "Khách lẻ";
-                txtPhone.Text = customer != null ? customer.Phone : "Không có";
+                txt_customerName.Text = customer != null ? customer.FullName : "Khách lẻ";
+                txt_phone.Text = customer != null ? customer.Phone : "Không có";
                 
-                dgvInvoiceDetails.DataSource = _salesBUS.GetInvoiceDetails(_currentInvoiceID);
+                dgv_invoiceDetails.DataSource = _salesBUS.GetInvoiceDetails(_currentInvoiceID);
                 SetTradeInPanelState(true);
             }
             else
@@ -95,7 +95,7 @@ public partial class FormTradeIn : Form
     {
         // 1. Kiểm tra CheckBox
         List<string> selectedSerials = new List<string>();
-        foreach (DataGridViewRow row in dgvInvoiceDetails.Rows)
+        foreach (DataGridViewRow row in dgv_invoiceDetails.Rows)
         {
             if (Convert.ToBoolean(row.Cells["chkSelect"].Value))
                 selectedSerials.Add(row.Cells["ItemCode"].Value.ToString());
@@ -108,7 +108,7 @@ public partial class FormTradeIn : Form
         }
 
         // 2. Validate dữ liệu tiền tệ
-        if (!decimal.TryParse(txtRefundAmount.Text.Replace(",", ""), out decimal refundAmount) || refundAmount < 0)
+        if (!decimal.TryParse(txt_refundAmount.Text.Replace(",", ""), out decimal refundAmount) || refundAmount < 0)
         {
             MessageBox.Show("Số tiền không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
@@ -125,12 +125,12 @@ public partial class FormTradeIn : Form
 
     private void btnCancel_Click(object sender, EventArgs e)
     {
-        txtInvoiceCode.Clear();
-        txtCustomerName.Clear();
-        txtPhone.Clear();
-        rtbTradeInNote.Clear();
-        txtRefundAmount.Clear();
-        dgvInvoiceDetails.DataSource = null;
+        txt_invoiceCode.Clear();
+        txt_customerName.Clear();
+        txt_phone.Clear();
+        rtb_tradeInNote.Clear();
+        txt_refundAmount.Clear();
+        dgv_invoiceDetails.DataSource = null;
         SetTradeInPanelState(false);
     }
 

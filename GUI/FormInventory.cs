@@ -27,10 +27,10 @@ namespace GUI
 
         private void FormInventory_Load(object sender, EventArgs e)
         {
-            cb_categories.Items.AddRange(new[] { "Tất cả danh mục", "Điện thoại", "Máy tính bảng" });
-            cb_categories.SelectedIndex = 0;
-            cb_statusFilter.Items.AddRange(new[] { "Tất cả trạng thái", "Còn hàng", "Sắp hết", "Hết hàng" });
-            cb_statusFilter.SelectedIndex = 0;
+            cbb_categories.Items.AddRange(new[] { "Tất cả danh mục", "Điện thoại", "Máy tính bảng" });
+            cbb_categories.SelectedIndex = 0;
+            cbb_statusFilter.Items.AddRange(new[] { "Tất cả trạng thái", "Còn hàng", "Sắp hết", "Hết hàng" });
+            cbb_statusFilter.SelectedIndex = 0;
 
             LoadData();
         }
@@ -49,12 +49,12 @@ namespace GUI
         private void ApplyFilter()
         {
             // Đảm bảo Text không bị null (CS8602)
-            string selectedCategory = cb_categories.Text ?? string.Empty;
-            string selectedStatus = cb_statusFilter.Text ?? string.Empty;
+            string selectedCategory = cbb_categories.Text ?? string.Empty;
+            string selectedStatus = cbb_statusFilter.Text ?? string.Empty;
 
             var filtered = _items.Where(x =>
-                (cb_categories.SelectedIndex == 0 || x.Category == selectedCategory) &&
-                (cb_statusFilter.SelectedIndex == 0 || x.Status == selectedStatus)).ToList();
+                (cbb_categories.SelectedIndex == 0 || x.Category == selectedCategory) &&
+                (cbb_statusFilter.SelectedIndex == 0 || x.Status == selectedStatus)).ToList();
 
             dgv_inventory.DataSource = filtered;
 
@@ -74,7 +74,7 @@ namespace GUI
 
         private void btn_filter_Click(object sender, EventArgs e) => ApplyFilter();
         private void btn_export_Click(object sender, EventArgs e) => MessageBox.Show("Đã xuất Excel!");
-        private void btn_refresh_Click(object sender, EventArgs e) { cb_categories.SelectedIndex = 0; cb_statusFilter.SelectedIndex = 0; LoadData(); }
+        private void btn_refresh_Click(object sender, EventArgs e) { cbb_categories.SelectedIndex = 0; cbb_statusFilter.SelectedIndex = 0; LoadData(); }
 
         private void lbl_timeUpdate_Click(object sender, EventArgs e)
         {

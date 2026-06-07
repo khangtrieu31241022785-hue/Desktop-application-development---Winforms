@@ -160,34 +160,34 @@ partial class FormPromotion
         // label5
         // 
         label5.AutoSize = true;
-        label5.Location = new Point(20, 216);
+        label5.Location = new System.Drawing.Point(41, 211);
         label5.Name = "label5";
-        label5.Size = new Size(138, 20);
-        label5.TabIndex = 6;
-        label5.Text = "Giảm % / Giảm tiền";
+        label5.Size = new System.Drawing.Size(211, 41);
+        label5.TabIndex = 4;
+        label5.Text = "Ngày Kết Thúc";
         // 
         // label4
         // 
         label4.AutoSize = true;
-        label4.Location = new Point(20, 148);
+        label4.Location = new System.Drawing.Point(41, 122);
         label4.Name = "label4";
-        label4.Size = new Size(48, 20);
-        label4.TabIndex = 5;
-        label4.Text = "Mô tả";
+        label4.Size = new System.Drawing.Size(112, 41);
+        label4.TabIndex = 3;
+        label4.Text = "Giảm%";
         // 
         // label3
         // 
         label3.AutoSize = true;
-        label3.Location = new Point(20, 63);
+        label3.Location = new System.Drawing.Point(41, 160);
         label3.Name = "label3";
-        label3.Size = new Size(119, 20);
-        label3.TabIndex = 4;
-        label3.Text = "Mã khuyến mãi *";
+        label3.Size = new System.Drawing.Size(199, 41);
+        label3.TabIndex = 2;
+        label3.Text = "Ngày Bắt Đầu";
         // 
         // label2
         // 
         label2.AutoSize = true;
-        label2.Location = new Point(20, 29);
+        label2.Location = new System.Drawing.Point(41, 88);
         label2.Name = "label2";
         label2.Size = new Size(179, 20);
         label2.TabIndex = 3;
@@ -313,20 +313,23 @@ partial class FormPromotion
         // 
         // FormPromotion
         // 
-        AutoScaleDimensions = new SizeF(8F, 20F);
-        AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1269, 637);
-        Controls.Add(groupBox3);
-        Controls.Add(groupBox2);
-        Name = "FormPromotion";
+        AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
+        AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        ClientSize = new System.Drawing.Size(1425, 1084);
+        Controls.Add(dgv_Promotion);
+        Controls.Add(groupBox1);
+        Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
         Text = "FormPromotion";
         Load += FormPromotion_Load;
-        groupBox3.ResumeLayout(false);
-        groupBox3.PerformLayout();
-        groupBox2.ResumeLayout(false);
-        ((ISupportInitialize)dgv_guest).EndInit();
+        groupBox1.ResumeLayout(false);
+        groupBox1.PerformLayout();
+        ((System.ComponentModel.ISupportInitialize)num_Discount).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgv_Promotion).EndInit();
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.DataGridView dgv_Promotion;
+    private System.Windows.Forms.GroupBox groupBox1;
 
     #endregion
 

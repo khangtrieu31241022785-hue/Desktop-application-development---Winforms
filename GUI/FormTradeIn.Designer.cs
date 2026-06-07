@@ -32,254 +32,255 @@ partial class FormTradeIn
     private void InitializeComponent()
     {
         groupBox1 = new System.Windows.Forms.GroupBox();
-        btnCancel = new System.Windows.Forms.Button();
-        btnConfirm = new System.Windows.Forms.Button();
-        btnCreateTradeIn = new System.Windows.Forms.Button();
-        dgvInvoiceDetails = new System.Windows.Forms.DataGridView();
-        groupBox2 = new System.Windows.Forms.GroupBox();
-        cboReason = new System.Windows.Forms.ComboBox();
-        label2 = new System.Windows.Forms.Label();
-        btnSearch = new System.Windows.Forms.Button();
-        txtInvoiceCode = new System.Windows.Forms.TextBox();
-        label1 = new System.Windows.Forms.Label();
-        label3 = new System.Windows.Forms.Label();
-        txtCustomerName = new System.Windows.Forms.TextBox();
+        txt_phone = new System.Windows.Forms.TextBox();
         label4 = new System.Windows.Forms.Label();
-        txtPhone = new System.Windows.Forms.TextBox();
-        label5 = new System.Windows.Forms.Label();
-        rtbTradeInNote = new System.Windows.Forms.RichTextBox();
+        txt_customerName = new System.Windows.Forms.TextBox();
+        label3 = new System.Windows.Forms.Label();
+        label1 = new System.Windows.Forms.Label();
+        txt_invoiceCode = new System.Windows.Forms.TextBox();
+        btn_searchTradeIn = new System.Windows.Forms.Button();
+        btn_cancelTradeIn = new System.Windows.Forms.Button();
+        btn_confirmTradeIn = new System.Windows.Forms.Button();
+        btn_createTradeIn = new System.Windows.Forms.Button();
+        dgv_invoiceDetails = new System.Windows.Forms.DataGridView();
+        groupBox2 = new System.Windows.Forms.GroupBox();
+        txt_refundAmount = new System.Windows.Forms.TextBox();
         label6 = new System.Windows.Forms.Label();
-        txtRefundAmount = new System.Windows.Forms.TextBox();
+        rtb_tradeInNote = new System.Windows.Forms.RichTextBox();
+        label5 = new System.Windows.Forms.Label();
+        txb_reason = new System.Windows.Forms.ComboBox();
+        label2 = new System.Windows.Forms.Label();
         groupBox1.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)dgvInvoiceDetails).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgv_invoiceDetails).BeginInit();
         groupBox2.SuspendLayout();
         SuspendLayout();
         // 
         // groupBox1
         // 
-        groupBox1.Controls.Add(txtPhone);
+        groupBox1.Controls.Add(txt_phone);
         groupBox1.Controls.Add(label4);
-        groupBox1.Controls.Add(txtCustomerName);
+        groupBox1.Controls.Add(txt_customerName);
         groupBox1.Controls.Add(label3);
         groupBox1.Controls.Add(label1);
-        groupBox1.Controls.Add(txtInvoiceCode);
-        groupBox1.Controls.Add(btnSearch);
+        groupBox1.Controls.Add(txt_invoiceCode);
+        groupBox1.Controls.Add(btn_searchTradeIn);
         groupBox1.Location = new System.Drawing.Point(12, 2);
         groupBox1.Name = "groupBox1";
-        groupBox1.Size = new System.Drawing.Size(604, 142);
+        groupBox1.Size = new System.Drawing.Size(744, 219);
         groupBox1.TabIndex = 0;
         groupBox1.TabStop = false;
         groupBox1.Text = "Đổi trả sản phẩm";
         // 
-        // btnCancel
+        // txt_phone
         // 
-        btnCancel.Location = new System.Drawing.Point(10, 615);
-        btnCancel.Name = "btnCancel";
-        btnCancel.Size = new System.Drawing.Size(340, 42);
-        btnCancel.TabIndex = 2;
-        btnCancel.Text = "Hủy";
-        btnCancel.UseVisualStyleBackColor = true;
+        txt_phone.Location = new System.Drawing.Point(349, 157);
+        txt_phone.Name = "txt_phone";
+        txt_phone.ReadOnly = true;
+        txt_phone.Size = new System.Drawing.Size(389, 47);
+        txt_phone.TabIndex = 6;
         // 
-        // btnConfirm
+        // label4
         // 
-        btnConfirm.Location = new System.Drawing.Point(10, 571);
-        btnConfirm.Name = "btnConfirm";
-        btnConfirm.RightToLeft = System.Windows.Forms.RightToLeft.No;
-        btnConfirm.Size = new System.Drawing.Size(340, 38);
-        btnConfirm.TabIndex = 1;
-        btnConfirm.Text = "Xác nhận";
-        btnConfirm.UseVisualStyleBackColor = true;
+        label4.Location = new System.Drawing.Point(349, 106);
+        label4.Name = "label4";
+        label4.Size = new System.Drawing.Size(248, 48);
+        label4.TabIndex = 5;
+        label4.Text = "Số điện thoại: ";
         // 
-        // btnCreateTradeIn
+        // txt_customerName
         // 
-        btnCreateTradeIn.Location = new System.Drawing.Point(10, 523);
-        btnCreateTradeIn.Name = "btnCreateTradeIn";
-        btnCreateTradeIn.Size = new System.Drawing.Size(340, 42);
-        btnCreateTradeIn.TabIndex = 0;
-        btnCreateTradeIn.Text = "+ Tạo phiếu đổi trả";
-        btnCreateTradeIn.UseVisualStyleBackColor = true;
+        txt_customerName.Location = new System.Drawing.Point(6, 157);
+        txt_customerName.Name = "txt_customerName";
+        txt_customerName.ReadOnly = true;
+        txt_customerName.Size = new System.Drawing.Size(337, 47);
+        txt_customerName.TabIndex = 4;
         // 
-        // dgvInvoiceDetails
+        // label3
         // 
-        dgvInvoiceDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dgvInvoiceDetails.Location = new System.Drawing.Point(12, 151);
-        dgvInvoiceDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-        dgvInvoiceDetails.Name = "dgvInvoiceDetails";
-        dgvInvoiceDetails.RowHeadersWidth = 51;
-        dgvInvoiceDetails.Size = new System.Drawing.Size(604, 514);
-        dgvInvoiceDetails.TabIndex = 1;
-        dgvInvoiceDetails.Text = "dataGridView1";
+        label3.Location = new System.Drawing.Point(6, 106);
+        label3.Name = "label3";
+        label3.Size = new System.Drawing.Size(266, 48);
+        label3.TabIndex = 3;
+        label3.Text = "Khách hàng: ";
+        // 
+        // label1
+        // 
+        label1.Location = new System.Drawing.Point(6, 43);
+        label1.Name = "label1";
+        label1.Size = new System.Drawing.Size(193, 47);
+        label1.TabIndex = 0;
+        label1.Text = "Mã HĐ gốc: ";
+        // 
+        // txt_invoiceCode
+        // 
+        txt_invoiceCode.Location = new System.Drawing.Point(205, 43);
+        txt_invoiceCode.Name = "txt_invoiceCode";
+        txt_invoiceCode.Size = new System.Drawing.Size(353, 47);
+        txt_invoiceCode.TabIndex = 1;
+        // 
+        // btn_searchTradeIn
+        // 
+        btn_searchTradeIn.Location = new System.Drawing.Point(564, 43);
+        btn_searchTradeIn.Name = "btn_searchTradeIn";
+        btn_searchTradeIn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+        btn_searchTradeIn.Size = new System.Drawing.Size(174, 47);
+        btn_searchTradeIn.TabIndex = 2;
+        btn_searchTradeIn.Text = "Tìm";
+        btn_searchTradeIn.UseVisualStyleBackColor = true;
+        // 
+        // btn_cancelTradeIn
+        // 
+        btn_cancelTradeIn.Location = new System.Drawing.Point(6, 786);
+        btn_cancelTradeIn.Name = "btn_cancelTradeIn";
+        btn_cancelTradeIn.Size = new System.Drawing.Size(805, 59);
+        btn_cancelTradeIn.TabIndex = 2;
+        btn_cancelTradeIn.Text = "Hủy";
+        btn_cancelTradeIn.UseVisualStyleBackColor = true;
+        // 
+        // btn_confirmTradeIn
+        // 
+        btn_confirmTradeIn.Location = new System.Drawing.Point(6, 708);
+        btn_confirmTradeIn.Name = "btn_confirmTradeIn";
+        btn_confirmTradeIn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+        btn_confirmTradeIn.Size = new System.Drawing.Size(805, 59);
+        btn_confirmTradeIn.TabIndex = 1;
+        btn_confirmTradeIn.Text = "Xác nhận";
+        btn_confirmTradeIn.UseVisualStyleBackColor = true;
+        // 
+        // btn_createTradeIn
+        // 
+        btn_createTradeIn.Location = new System.Drawing.Point(6, 627);
+        btn_createTradeIn.Name = "btn_createTradeIn";
+        btn_createTradeIn.Size = new System.Drawing.Size(805, 59);
+        btn_createTradeIn.TabIndex = 0;
+        btn_createTradeIn.Text = "Tạo phiếu đổi trả";
+        btn_createTradeIn.UseVisualStyleBackColor = true;
+        // 
+        // dgv_invoiceDetails
+        // 
+        dgv_invoiceDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgv_invoiceDetails.Location = new System.Drawing.Point(12, 228);
+        dgv_invoiceDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+        dgv_invoiceDetails.Name = "dgv_invoiceDetails";
+        dgv_invoiceDetails.RowHeadersWidth = 51;
+        dgv_invoiceDetails.Size = new System.Drawing.Size(744, 770);
+        dgv_invoiceDetails.TabIndex = 1;
+        dgv_invoiceDetails.Text = "dataGridView1";
         // 
         // groupBox2
         // 
-        groupBox2.Controls.Add(txtRefundAmount);
+        groupBox2.Controls.Add(txt_refundAmount);
         groupBox2.Controls.Add(label6);
-        groupBox2.Controls.Add(rtbTradeInNote);
+        groupBox2.Controls.Add(rtb_tradeInNote);
         groupBox2.Controls.Add(label5);
-        groupBox2.Controls.Add(btnCancel);
-        groupBox2.Controls.Add(cboReason);
-        groupBox2.Controls.Add(btnConfirm);
+        groupBox2.Controls.Add(btn_cancelTradeIn);
+        groupBox2.Controls.Add(txb_reason);
+        groupBox2.Controls.Add(btn_confirmTradeIn);
         groupBox2.Controls.Add(label2);
-        groupBox2.Controls.Add(btnCreateTradeIn);
-        groupBox2.Location = new System.Drawing.Point(622, 2);
+        groupBox2.Controls.Add(btn_createTradeIn);
+        groupBox2.Location = new System.Drawing.Point(762, 12);
         groupBox2.Name = "groupBox2";
-        groupBox2.Size = new System.Drawing.Size(358, 663);
+        groupBox2.Size = new System.Drawing.Size(817, 986);
         groupBox2.TabIndex = 2;
         groupBox2.TabStop = false;
         // 
-        // cboReason
+        // txt_refundAmount
         // 
-        cboReason.FormattingEnabled = true;
-        cboReason.Location = new System.Drawing.Point(6, 57);
-        cboReason.Name = "cboReason";
-        cboReason.Size = new System.Drawing.Size(344, 28);
-        cboReason.TabIndex = 4;
+        txt_refundAmount.Location = new System.Drawing.Point(6, 530);
+        txt_refundAmount.Name = "txt_refundAmount";
+        txt_refundAmount.Size = new System.Drawing.Size(805, 47);
+        txt_refundAmount.TabIndex = 8;
+        txt_refundAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        // 
+        // label6
+        // 
+        label6.Location = new System.Drawing.Point(6, 480);
+        label6.Name = "label6";
+        label6.Size = new System.Drawing.Size(264, 47);
+        label6.TabIndex = 7;
+        label6.Text = "Định giá / Số tiền hoàn (VNĐ):";
+        // 
+        // rtb_tradeInNote
+        // 
+        rtb_tradeInNote.Location = new System.Drawing.Point(6, 184);
+        rtb_tradeInNote.Name = "rtb_tradeInNote";
+        rtb_tradeInNote.Size = new System.Drawing.Size(805, 280);
+        rtb_tradeInNote.TabIndex = 6;
+        rtb_tradeInNote.Text = "";
+        // 
+        // label5
+        // 
+        label5.Location = new System.Drawing.Point(6, 134);
+        label5.Name = "label5";
+        label5.Size = new System.Drawing.Size(281, 47);
+        label5.TabIndex = 5;
+        label5.Text = "Ghi chú tình trạng: ";
+        // 
+        // txb_reason
+        // 
+        txb_reason.FormattingEnabled = true;
+        txb_reason.Location = new System.Drawing.Point(6, 82);
+        txb_reason.Name = "txb_reason";
+        txb_reason.Size = new System.Drawing.Size(805, 49);
+        txb_reason.TabIndex = 4;
         // 
         // label2
         // 
-        label2.Location = new System.Drawing.Point(6, 29);
+        label2.Location = new System.Drawing.Point(6, 32);
         label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(139, 25);
+        label2.Size = new System.Drawing.Size(222, 47);
         label2.TabIndex = 3;
         label2.Text = "Lý do trả hàng:";
         label2.Click += label2_Click;
         // 
-        // btnSearch
-        // 
-        btnSearch.Location = new System.Drawing.Point(409, 29);
-        btnSearch.Name = "btnSearch";
-        btnSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
-        btnSearch.Size = new System.Drawing.Size(131, 34);
-        btnSearch.TabIndex = 2;
-        btnSearch.Text = "Tìm";
-        btnSearch.UseVisualStyleBackColor = true;
-        // 
-        // txtInvoiceCode
-        // 
-        txtInvoiceCode.Location = new System.Drawing.Point(105, 36);
-        txtInvoiceCode.Name = "txtInvoiceCode";
-        txtInvoiceCode.Size = new System.Drawing.Size(280, 27);
-        txtInvoiceCode.TabIndex = 1;
-        // 
-        // label1
-        // 
-        label1.Location = new System.Drawing.Point(6, 39);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(100, 22);
-        label1.TabIndex = 0;
-        label1.Text = "Mã HĐ gốc: ";
-        // 
-        // label3
-        // 
-        label3.Location = new System.Drawing.Point(6, 73);
-        label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(100, 22);
-        label3.TabIndex = 3;
-        label3.Text = "Khách hàng: ";
-        // 
-        // txtCustomerName
-        // 
-        txtCustomerName.Location = new System.Drawing.Point(6, 103);
-        txtCustomerName.Name = "txtCustomerName";
-        txtCustomerName.ReadOnly = true;
-        txtCustomerName.Size = new System.Drawing.Size(266, 27);
-        txtCustomerName.TabIndex = 4;
-        // 
-        // label4
-        // 
-        label4.Location = new System.Drawing.Point(332, 76);
-        label4.Name = "label4";
-        label4.Size = new System.Drawing.Size(100, 22);
-        label4.TabIndex = 5;
-        label4.Text = "Số điện thoại: ";
-        // 
-        // txtPhone
-        // 
-        txtPhone.Location = new System.Drawing.Point(332, 101);
-        txtPhone.Name = "txtPhone";
-        txtPhone.ReadOnly = true;
-        txtPhone.Size = new System.Drawing.Size(251, 27);
-        txtPhone.TabIndex = 6;
-        // 
-        // label5
-        // 
-        label5.Location = new System.Drawing.Point(6, 106);
-        label5.Name = "label5";
-        label5.Size = new System.Drawing.Size(139, 25);
-        label5.TabIndex = 5;
-        label5.Text = "Ghi chú tình trạng: ";
-        // 
-        // rtbTradeInNote
-        // 
-        rtbTradeInNote.Location = new System.Drawing.Point(6, 134);
-        rtbTradeInNote.Name = "rtbTradeInNote";
-        rtbTradeInNote.Size = new System.Drawing.Size(344, 280);
-        rtbTradeInNote.TabIndex = 6;
-        rtbTradeInNote.Text = "";
-        // 
-        // label6
-        // 
-        label6.Location = new System.Drawing.Point(6, 428);
-        label6.Name = "label6";
-        label6.Size = new System.Drawing.Size(219, 25);
-        label6.TabIndex = 7;
-        label6.Text = "Định giá / Số tiền hoàn (VNĐ):";
-        // 
-        // txtRefundAmount
-        // 
-        txtRefundAmount.Location = new System.Drawing.Point(6, 456);
-        txtRefundAmount.Name = "txtRefundAmount";
-        txtRefundAmount.Size = new System.Drawing.Size(344, 27);
-        txtRefundAmount.TabIndex = 8;
-        txtRefundAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-        // 
         // FormTradeIn
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+        AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(984, 673);
+        ClientSize = new System.Drawing.Size(1591, 1011);
         Controls.Add(groupBox2);
-        Controls.Add(dgvInvoiceDetails);
+        Controls.Add(dgv_invoiceDetails);
         Controls.Add(groupBox1);
+        Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
         Text = "Đổi trả sản phẩm";
         groupBox1.ResumeLayout(false);
         groupBox1.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)dgvInvoiceDetails).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgv_invoiceDetails).EndInit();
         groupBox2.ResumeLayout(false);
         groupBox2.PerformLayout();
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.TextBox txtRefundAmount;
+    private System.Windows.Forms.TextBox txt_refundAmount;
 
     private System.Windows.Forms.Label label6;
 
-    private System.Windows.Forms.RichTextBox rtbTradeInNote;
+    private System.Windows.Forms.RichTextBox rtb_tradeInNote;
 
     private System.Windows.Forms.Label label5;
 
     private System.Windows.Forms.Label label4;
-    private System.Windows.Forms.TextBox txtPhone;
+    private System.Windows.Forms.TextBox txt_phone;
 
     private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.TextBox txtCustomerName;
+    private System.Windows.Forms.TextBox txt_customerName;
 
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.ComboBox cboReason;
+    private System.Windows.Forms.ComboBox txb_reason;
 
-    private System.Windows.Forms.Button btnSearch;
+    private System.Windows.Forms.Button btn_searchTradeIn;
 
-    private System.Windows.Forms.TextBox txtInvoiceCode;
+    private System.Windows.Forms.TextBox txt_invoiceCode;
 
     private System.Windows.Forms.Label label1;
 
-    private System.Windows.Forms.Button btnCreateTradeIn;
-    private System.Windows.Forms.Button btnConfirm;
-    private System.Windows.Forms.Button btnCancel;
+    private System.Windows.Forms.Button btn_createTradeIn;
+    private System.Windows.Forms.Button btn_confirmTradeIn;
+    private System.Windows.Forms.Button btn_cancelTradeIn;
 
     private System.Windows.Forms.GroupBox groupBox2;
 
-    private System.Windows.Forms.DataGridView dgvInvoiceDetails;
+    private System.Windows.Forms.DataGridView dgv_invoiceDetails;
 
     private System.Windows.Forms.GroupBox groupBox1;
 
