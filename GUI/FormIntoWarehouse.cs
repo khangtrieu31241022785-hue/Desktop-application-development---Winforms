@@ -32,9 +32,9 @@ namespace GUI
                 new { Id = 1, Name = "Apple VN" },
                 new { Id = 2, Name = "Samsung VN" }
             };
-            cb_suppliers.DataSource = listNCC;
-            cb_suppliers.DisplayMember = "Name";
-            cb_suppliers.ValueMember = "Id";
+            cbb_suppliers.DataSource = listNCC;
+            cbb_suppliers.DisplayMember = "Name";
+            cbb_suppliers.ValueMember = "Id";
 
             ToggleState(false);
             txt_receiptCode.Text = "PN" + DateTime.Now.ToString("yyyyMMdd");
@@ -42,7 +42,7 @@ namespace GUI
 
         private void ToggleState(bool enabled)
         {
-            cb_suppliers.Enabled = enabled;
+            cbb_suppliers.Enabled = enabled;
             btn_addProduct.Enabled = enabled;
             btn_confirmReceipt.Enabled = enabled;
             btn_cancelReceipt.Enabled = enabled;
@@ -91,7 +91,7 @@ namespace GUI
 
             lbl_totalQty.Text = $"Tổng SL: {_cart.Sum(x => x.Quantity)}";
             lbl_totalAmount.Text = $"Tổng tiền: {_cart.Sum(x => x.TotalCost):N0} đ";
-            lbl_bottomNcc.Text = $"NCC: {cb_suppliers.Text ?? string.Empty}";
+            lbl_bottomNcc.Text = $"NCC: {cbb_suppliers.Text ?? string.Empty}";
         }
 
         private void btn_confirmReceipt_Click(object sender, EventArgs e)

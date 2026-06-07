@@ -86,7 +86,7 @@ partial class FormGuarantee
         txtDeviceStatus.Location = new System.Drawing.Point(315, 132);
         txtDeviceStatus.Name = "txtDeviceStatus";
         txtDeviceStatus.ReadOnly = true;
-        txtDeviceStatus.Size = new System.Drawing.Size(251, 27);
+        txtDeviceStatus.Size = new System.Drawing.Size(251, 47);
         txtDeviceStatus.TabIndex = 10;
         // 
         // txtPhone
@@ -94,7 +94,7 @@ partial class FormGuarantee
         txtPhone.Location = new System.Drawing.Point(315, 82);
         txtPhone.Name = "txtPhone";
         txtPhone.ReadOnly = true;
-        txtPhone.Size = new System.Drawing.Size(251, 27);
+        txtPhone.Size = new System.Drawing.Size(251, 47);
         txtPhone.TabIndex = 9;
         // 
         // txtProductName
@@ -102,7 +102,7 @@ partial class FormGuarantee
         txtProductName.Location = new System.Drawing.Point(6, 132);
         txtProductName.Name = "txtProductName";
         txtProductName.ReadOnly = true;
-        txtProductName.Size = new System.Drawing.Size(251, 27);
+        txtProductName.Size = new System.Drawing.Size(251, 47);
         txtProductName.TabIndex = 8;
         // 
         // txtCustomerName
@@ -110,7 +110,7 @@ partial class FormGuarantee
         txtCustomerName.Location = new System.Drawing.Point(6, 79);
         txtCustomerName.Name = "txtCustomerName";
         txtCustomerName.ReadOnly = true;
-        txtCustomerName.Size = new System.Drawing.Size(251, 27);
+        txtCustomerName.Size = new System.Drawing.Size(251, 47);
         txtCustomerName.TabIndex = 7;
         // 
         // label5
@@ -158,7 +158,7 @@ partial class FormGuarantee
         // 
         txtSearch.Location = new System.Drawing.Point(160, 26);
         txtSearch.Name = "txtSearch";
-        txtSearch.Size = new System.Drawing.Size(297, 27);
+        txtSearch.Size = new System.Drawing.Size(297, 47);
         txtSearch.TabIndex = 1;
         // 
         // label1
@@ -226,7 +226,7 @@ partial class FormGuarantee
         cboStatus.FormattingEnabled = true;
         cboStatus.Location = new System.Drawing.Point(6, 384);
         cboStatus.Name = "cboStatus";
-        cboStatus.Size = new System.Drawing.Size(338, 28);
+        cboStatus.Size = new System.Drawing.Size(338, 49);
         cboStatus.TabIndex = 9;
         // 
         // label7
@@ -263,14 +263,15 @@ partial class FormGuarantee
         label6.TabIndex = 4;
         label6.Text = "Mô tả sản phẩm";
         // 
-        // FormWarranty
+        // FormGuarantee
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+        AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(984, 701);
+        ClientSize = new System.Drawing.Size(1536, 976);
         Controls.Add(groupBox2);
         Controls.Add(dgvWarranty);
         Controls.Add(groupBox1);
+        Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
         Text = "Tiếp nhận bảo hành";
         Load += FormWarranty_Load;
         groupBox1.ResumeLayout(false);

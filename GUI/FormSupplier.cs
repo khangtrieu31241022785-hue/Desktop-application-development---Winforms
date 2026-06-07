@@ -152,5 +152,10 @@ namespace GUI
             txt_address.Clear();
             txt_debt.Text = "0";
         }
+
+        private void lbl_address_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
