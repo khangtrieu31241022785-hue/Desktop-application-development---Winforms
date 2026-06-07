@@ -31,188 +31,374 @@ partial class FormManageShift
     /// </summary>
     private void InitializeComponent()
     {
-        dataGridView1 = new System.Windows.Forms.DataGridView();
-        button1 = new System.Windows.Forms.Button();
-        button2 = new System.Windows.Forms.Button();
-        button3 = new System.Windows.Forms.Button();
-        button4 = new System.Windows.Forms.Button();
-        label1 = new System.Windows.Forms.Label();
-        label2 = new System.Windows.Forms.Label();
-        label3 = new System.Windows.Forms.Label();
-        label4 = new System.Windows.Forms.Label();
+        dgv_danhSachCa = new System.Windows.Forms.DataGridView();
+        btn_moCa = new System.Windows.Forms.Button();
+        button5 = new System.Windows.Forms.Button();
+        btn_chotCa = new System.Windows.Forms.Button();
         panel1 = new System.Windows.Forms.Panel();
-        textBox1 = new System.Windows.Forms.TextBox();
-        textBox2 = new System.Windows.Forms.TextBox();
-        dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-        comboBox1 = new System.Windows.Forms.ComboBox();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+        lbl_trangThaiTitle = new System.Windows.Forms.Label();
+        label1 = new System.Windows.Forms.Label();
+        panel2 = new System.Windows.Forms.Panel();
+        lbl_gioMoCa = new System.Windows.Forms.Label();
+        lbl_gioMoCaTitle = new System.Windows.Forms.Label();
+        panel3 = new System.Windows.Forms.Panel();
+        lbl_tienDauca = new System.Windows.Forms.Label();
+        lbl_tienDaucaTitle = new System.Windows.Forms.Label();
+        panel4 = new System.Windows.Forms.Panel();
+        lbl_hdTrongca = new System.Windows.Forms.Label();
+        lbl_hdTrongcaTitle = new System.Windows.Forms.Label();
+        panel5 = new System.Windows.Forms.Panel();
+        lbl_doanhThuca = new System.Windows.Forms.Label();
+        lbl_doanhThucaTitle = new System.Windows.Forms.Label();
+        col_maCa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_nhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_moLuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_dongLuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_tienDauca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_tienCuoica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_chenhLech = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_trangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        pnl_footer = new System.Windows.Forms.Panel();
+        lbl_footerLeft = new System.Windows.Forms.Label();
+        lbl_footerRight = new System.Windows.Forms.Label();
+        ((System.ComponentModel.ISupportInitialize)dgv_danhSachCa).BeginInit();
         panel1.SuspendLayout();
+        panel2.SuspendLayout();
+        panel3.SuspendLayout();
+        panel4.SuspendLayout();
+        panel5.SuspendLayout();
+        pnl_footer.SuspendLayout();
         SuspendLayout();
         // 
-        // dataGridView1
+        // dgv_danhSachCa
         // 
-        dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridView1.Location = new System.Drawing.Point(37, 110);
-        dataGridView1.Name = "dataGridView1";
-        dataGridView1.RowHeadersWidth = 51;
-        dataGridView1.Size = new System.Drawing.Size(797, 406);
-        dataGridView1.TabIndex = 0;
-        dataGridView1.Text = "dataGridView1";
+        dgv_danhSachCa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        dgv_danhSachCa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgv_danhSachCa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { col_maCa, col_nhanVien, col_moLuc, col_dongLuc, col_tienDauca, col_tienCuoica, col_chenhLech, col_trangThai });
+        dgv_danhSachCa.Location = new System.Drawing.Point(12, 247);
+        dgv_danhSachCa.Name = "dgv_danhSachCa";
+        dgv_danhSachCa.RowHeadersWidth = 51;
+        dgv_danhSachCa.Size = new System.Drawing.Size(1048, 302);
+        dgv_danhSachCa.TabIndex = 0;
+        dgv_danhSachCa.Text = "dataGridView1";
         // 
-        // button1
+        // btn_moCa
         // 
-        button1.Location = new System.Drawing.Point(25, 553);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(122, 41);
-        button1.TabIndex = 1;
-        button1.Text = "Thêm";
-        button1.UseVisualStyleBackColor = true;
+        btn_moCa.Location = new System.Drawing.Point(13, 20);
+        btn_moCa.Name = "btn_moCa";
+        btn_moCa.Size = new System.Drawing.Size(133, 57);
+        btn_moCa.TabIndex = 5;
+        btn_moCa.Text = "▶ Mở ca";
+        btn_moCa.UseVisualStyleBackColor = true;
         // 
-        // button2
+        // button5
         // 
-        button2.Location = new System.Drawing.Point(244, 553);
-        button2.Name = "button2";
-        button2.Size = new System.Drawing.Size(122, 41);
-        button2.TabIndex = 2;
-        button2.Text = "Sửa";
-        button2.UseVisualStyleBackColor = true;
+        button5.Location = new System.Drawing.Point(326, 20);
+        button5.Name = "button5";
+        button5.Size = new System.Drawing.Size(133, 57);
+        button5.TabIndex = 6;
+        button5.Text = "📋Lịch sử ca";
+        button5.UseVisualStyleBackColor = true;
         // 
-        // button3
+        // btn_chotCa
         // 
-        button3.Location = new System.Drawing.Point(469, 553);
-        button3.Name = "button3";
-        button3.Size = new System.Drawing.Size(122, 41);
-        button3.TabIndex = 3;
-        button3.Text = "Xóa";
-        button3.UseVisualStyleBackColor = true;
-        // 
-        // button4
-        // 
-        button4.Location = new System.Drawing.Point(698, 553);
-        button4.Name = "button4";
-        button4.Size = new System.Drawing.Size(122, 41);
-        button4.TabIndex = 4;
-        button4.Text = "Làm mới";
-        button4.UseVisualStyleBackColor = true;
-        // 
-        // label1
-        // 
-        label1.Location = new System.Drawing.Point(30, 21);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(110, 41);
-        label1.TabIndex = 5;
-        label1.Text = "Mã nhân viên";
-        // 
-        // label2
-        // 
-        label2.Location = new System.Drawing.Point(237, 21);
-        label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(110, 41);
-        label2.TabIndex = 6;
-        label2.Text = "Tên nhân viên";
-        label2.Click += label2_Click;
-        // 
-        // label3
-        // 
-        label3.Location = new System.Drawing.Point(703, 21);
-        label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(110, 27);
-        label3.TabIndex = 7;
-        label3.Text = "Ngày làm";
-        label3.Click += label3_Click;
-        // 
-        // label4
-        // 
-        label4.Location = new System.Drawing.Point(462, 21);
-        label4.Name = "label4";
-        label4.Size = new System.Drawing.Size(110, 27);
-        label4.TabIndex = 8;
-        label4.Text = "Ca làm việc";
+        btn_chotCa.Location = new System.Drawing.Point(172, 20);
+        btn_chotCa.Name = "btn_chotCa";
+        btn_chotCa.Size = new System.Drawing.Size(133, 57);
+        btn_chotCa.TabIndex = 7;
+        btn_chotCa.Text = "■ Chốt ca";
+        btn_chotCa.UseVisualStyleBackColor = true;
         // 
         // panel1
         // 
-        panel1.Controls.Add(comboBox1);
-        panel1.Controls.Add(dateTimePicker1);
-        panel1.Controls.Add(textBox2);
-        panel1.Controls.Add(textBox1);
-        panel1.Controls.Add(label4);
-        panel1.Controls.Add(label3);
-        panel1.Controls.Add(label2);
+        panel1.Controls.Add(lbl_trangThaiTitle);
         panel1.Controls.Add(label1);
-        panel1.Location = new System.Drawing.Point(7, 7);
+        panel1.Location = new System.Drawing.Point(30, 117);
         panel1.Name = "panel1";
-        panel1.Size = new System.Drawing.Size(853, 94);
-        panel1.TabIndex = 9;
+        panel1.Size = new System.Drawing.Size(150, 84);
+        panel1.TabIndex = 8;
         // 
-        // textBox1
+        // lbl_trangThaiTitle
         // 
-        textBox1.Location = new System.Drawing.Point(18, 54);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new System.Drawing.Size(126, 27);
-        textBox1.TabIndex = 9;
+        lbl_trangThaiTitle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_trangThaiTitle.Location = new System.Drawing.Point(13, 41);
+        lbl_trangThaiTitle.Name = "lbl_trangThaiTitle";
+        lbl_trangThaiTitle.Size = new System.Drawing.Size(111, 26);
+        lbl_trangThaiTitle.TabIndex = 1;
+        lbl_trangThaiTitle.Text = "Trạng thái ca";
+        lbl_trangThaiTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        lbl_trangThaiTitle.Click += label2_Click_1;
         // 
-        // textBox2
+        // label1
         // 
-        textBox2.Location = new System.Drawing.Point(221, 54);
-        textBox2.Name = "textBox2";
-        textBox2.Size = new System.Drawing.Size(126, 27);
-        textBox2.TabIndex = 10;
+        label1.Location = new System.Drawing.Point(13, 11);
+        label1.Name = "label1";
+        label1.Size = new System.Drawing.Size(111, 30);
+        label1.TabIndex = 0;
+        label1.Text = "Đang mở";
+        label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
-        // dateTimePicker1
+        // panel2
         // 
-        dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        dateTimePicker1.Location = new System.Drawing.Point(658, 51);
-        dateTimePicker1.Name = "dateTimePicker1";
-        dateTimePicker1.Size = new System.Drawing.Size(155, 27);
-        dateTimePicker1.TabIndex = 11;
+        panel2.Controls.Add(lbl_gioMoCa);
+        panel2.Controls.Add(lbl_gioMoCaTitle);
+        panel2.Location = new System.Drawing.Point(234, 117);
+        panel2.Name = "panel2";
+        panel2.Size = new System.Drawing.Size(157, 84);
+        panel2.TabIndex = 9;
         // 
-        // comboBox1
+        //  lbl_gioMoCa
         // 
-        comboBox1.FormattingEnabled = true;
-        comboBox1.Location = new System.Drawing.Point(452, 53);
-        comboBox1.Name = "comboBox1";
-        comboBox1.Size = new System.Drawing.Size(120, 28);
-        comboBox1.TabIndex = 12;
+        lbl_gioMoCa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_gioMoCa.Location = new System.Drawing.Point(26, 41);
+        lbl_gioMoCa.Name = " lbl_gioMoCa";
+        lbl_gioMoCa.Size = new System.Drawing.Size(111, 26);
+        lbl_gioMoCa.TabIndex = 1;
+        lbl_gioMoCa.Text = "Giờ mở ca";
+        lbl_gioMoCa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        //  lbl_gioMoCaTitle
+        // 
+        lbl_gioMoCaTitle.Location = new System.Drawing.Point(26, 11);
+        lbl_gioMoCaTitle.Name = " lbl_gioMoCaTitle";
+        lbl_gioMoCaTitle.Size = new System.Drawing.Size(111, 30);
+        lbl_gioMoCaTitle.TabIndex = 0;
+        lbl_gioMoCaTitle.Text = "7:00";
+        lbl_gioMoCaTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // panel3
+        // 
+        panel3.Controls.Add(lbl_tienDauca);
+        panel3.Controls.Add(lbl_tienDaucaTitle);
+        panel3.Location = new System.Drawing.Point(429, 117);
+        panel3.Name = "panel3";
+        panel3.Size = new System.Drawing.Size(157, 84);
+        panel3.TabIndex = 10;
+        // 
+        // lbl_tienDauca
+        // 
+        lbl_tienDauca.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_tienDauca.Location = new System.Drawing.Point(26, 41);
+        lbl_tienDauca.Name = "lbl_tienDauca";
+        lbl_tienDauca.Size = new System.Drawing.Size(111, 26);
+        lbl_tienDauca.TabIndex = 1;
+        lbl_tienDauca.Text = "Tiền đầu ca";
+        lbl_tienDauca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // lbl_tienDaucaTitle
+        // 
+        lbl_tienDaucaTitle.Location = new System.Drawing.Point(26, 11);
+        lbl_tienDaucaTitle.Name = "lbl_tienDaucaTitle";
+        lbl_tienDaucaTitle.Size = new System.Drawing.Size(111, 30);
+        lbl_tienDaucaTitle.TabIndex = 0;
+        lbl_tienDaucaTitle.Text = "1.000.000";
+        lbl_tienDaucaTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // panel4
+        // 
+        panel4.Controls.Add(lbl_hdTrongca);
+        panel4.Controls.Add(lbl_hdTrongcaTitle);
+        panel4.Location = new System.Drawing.Point(651, 117);
+        panel4.Name = "panel4";
+        panel4.Size = new System.Drawing.Size(157, 84);
+        panel4.TabIndex = 11;
+        // 
+        // lbl_hdTrongca
+        // 
+        lbl_hdTrongca.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_hdTrongca.Location = new System.Drawing.Point(26, 41);
+        lbl_hdTrongca.Name = "lbl_hdTrongca";
+        lbl_hdTrongca.Size = new System.Drawing.Size(111, 26);
+        lbl_hdTrongca.TabIndex = 1;
+        lbl_hdTrongca.Text = "HĐ trong ca";
+        lbl_hdTrongca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // lbl_hdTrongcaTitle
+        // 
+        lbl_hdTrongcaTitle.Location = new System.Drawing.Point(26, 11);
+        lbl_hdTrongcaTitle.Name = "lbl_hdTrongcaTitle";
+        lbl_hdTrongcaTitle.Size = new System.Drawing.Size(111, 30);
+        lbl_hdTrongcaTitle.TabIndex = 0;
+        lbl_hdTrongcaTitle.Text = "10";
+        lbl_hdTrongcaTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // panel5
+        // 
+        panel5.Controls.Add(lbl_doanhThuca);
+        panel5.Controls.Add(lbl_doanhThucaTitle);
+        panel5.Location = new System.Drawing.Point(870, 117);
+        panel5.Name = "panel5";
+        panel5.Size = new System.Drawing.Size(157, 84);
+        panel5.TabIndex = 12;
+        // 
+        // lbl_doanhThuca
+        // 
+        lbl_doanhThuca.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_doanhThuca.Location = new System.Drawing.Point(26, 41);
+        lbl_doanhThuca.Name = "lbl_doanhThuca";
+        lbl_doanhThuca.Size = new System.Drawing.Size(111, 26);
+        lbl_doanhThuca.TabIndex = 1;
+        lbl_doanhThuca.Text = "Doanh thu ca";
+        lbl_doanhThuca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // lbl_doanhThucaTitle
+        // 
+        lbl_doanhThucaTitle.Location = new System.Drawing.Point(26, 11);
+        lbl_doanhThucaTitle.Name = "lbl_doanhThucaTitle";
+        lbl_doanhThucaTitle.Size = new System.Drawing.Size(111, 30);
+        lbl_doanhThucaTitle.TabIndex = 0;
+        lbl_doanhThucaTitle.Text = "50.000.000";
+        lbl_doanhThucaTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // col_maCa
+        // 
+        col_maCa.HeaderText = "Mã ca";
+        col_maCa.MinimumWidth = 6;
+        col_maCa.Name = "col_maCa";
+        col_maCa.Width = 125;
+        // 
+        // col_nhanVien
+        // 
+        col_nhanVien.HeaderText = "Nhân viên";
+        col_nhanVien.MinimumWidth = 6;
+        col_nhanVien.Name = "col_nhanVien";
+        col_nhanVien.Width = 125;
+        // 
+        // col_moLuc
+        // 
+        col_moLuc.HeaderText = "Mở lúc";
+        col_moLuc.MinimumWidth = 6;
+        col_moLuc.Name = "col_moLuc";
+        col_moLuc.Width = 125;
+        // 
+        // col_dongLuc
+        // 
+        col_dongLuc.HeaderText = "Đóng lúc";
+        col_dongLuc.MinimumWidth = 6;
+        col_dongLuc.Name = "col_dongLuc";
+        col_dongLuc.Width = 125;
+        // 
+        // col_tienDauca
+        // 
+        col_tienDauca.HeaderText = "Tiền đầu ca";
+        col_tienDauca.MinimumWidth = 6;
+        col_tienDauca.Name = "col_tienDauca";
+        col_tienDauca.Width = 125;
+        // 
+        // col_tienCuoica
+        // 
+        col_tienCuoica.HeaderText = "Tiền cuối ca";
+        col_tienCuoica.MinimumWidth = 6;
+        col_tienCuoica.Name = "col_tienCuoica";
+        col_tienCuoica.Width = 125;
+        // 
+        // col_chenhLech
+        // 
+        col_chenhLech.HeaderText = "Chênh lệch";
+        col_chenhLech.MinimumWidth = 6;
+        col_chenhLech.Name = "col_chenhLech";
+        col_chenhLech.Width = 125;
+        // 
+        // col_trangThai
+        // 
+        col_trangThai.HeaderText = "Trạng thái";
+        col_trangThai.MinimumWidth = 6;
+        col_trangThai.Name = "col_trangThai";
+        col_trangThai.Width = 125;
+        // 
+        // pnl_footer
+        // 
+        pnl_footer.Controls.Add(lbl_footerRight);
+        pnl_footer.Controls.Add(lbl_footerLeft);
+        pnl_footer.Location = new System.Drawing.Point(27, 554);
+        pnl_footer.Name = "pnl_footer";
+        pnl_footer.Size = new System.Drawing.Size(1033, 40);
+        pnl_footer.TabIndex = 13;
+        // 
+        // lbl_footerLeft
+        // 
+        lbl_footerLeft.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_footerLeft.Location = new System.Drawing.Point(1, 3);
+        lbl_footerLeft.Name = "lbl_footerLeft";
+        lbl_footerLeft.Size = new System.Drawing.Size(104, 36);
+        lbl_footerLeft.TabIndex = 0;
+        lbl_footerLeft.Text = "Ca hiện tại:";
+        lbl_footerLeft.Click += label2_Click_2;
+        // 
+        // lbl_footerRight
+        // 
+        lbl_footerRight.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_footerRight.Location = new System.Drawing.Point(929, 0);
+        lbl_footerRight.Name = "lbl_footerRight";
+        lbl_footerRight.Size = new System.Drawing.Size(104, 36);
+        lbl_footerRight.TabIndex = 1;
+        lbl_footerRight.Text = "Mở lúc:";
         // 
         // FormManageShift
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(906, 606);
+        ClientSize = new System.Drawing.Size(1072, 606);
+        Controls.Add(pnl_footer);
+        Controls.Add(panel5);
+        Controls.Add(panel4);
+        Controls.Add(panel3);
+        Controls.Add(panel2);
         Controls.Add(panel1);
-        Controls.Add(button4);
-        Controls.Add(button3);
-        Controls.Add(button2);
-        Controls.Add(button1);
-        Controls.Add(dataGridView1);
+        Controls.Add(btn_chotCa);
+        Controls.Add(button5);
+        Controls.Add(btn_moCa);
+        Controls.Add(dgv_danhSachCa);
         Text = "Quản lí ca làm việc";
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgv_danhSachCa).EndInit();
         panel1.ResumeLayout(false);
-        panel1.PerformLayout();
+        panel2.ResumeLayout(false);
+        panel3.ResumeLayout(false);
+        panel4.ResumeLayout(false);
+        panel5.ResumeLayout(false);
+        pnl_footer.ResumeLayout(false);
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.ComboBox comboBox1;
+    private System.Windows.Forms.Panel pnl_footer;
 
-    private System.Windows.Forms.DateTimePicker dateTimePicker1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_tienDauca;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_tienCuoica;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_chenhLech;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_trangThai;
 
-    private System.Windows.Forms.TextBox textBox1;
-    private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_nhanVien;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_moLuc;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_dongLuc;
 
-    private System.Windows.Forms.Label label4;
-    private System.Windows.Forms.Panel panel1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_maCa;
 
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Panel panel2;
+    private System.Windows.Forms.Label lbl_gioMoCa;
+    private System.Windows.Forms.Label lbl_gioMoCaTitle;
+    private System.Windows.Forms.Label lbl_footerLeft;
+    private System.Windows.Forms.Label lbl_footerRight;
+    private System.Windows.Forms.Panel panel3;
+    private System.Windows.Forms.Label lbl_tienDauca;
+    private System.Windows.Forms.Label lbl_tienDaucaTitle;
+    private System.Windows.Forms.Panel panel4;
+    private System.Windows.Forms.Label lbl_hdTrongca;
+    private System.Windows.Forms.Label lbl_hdTrongcaTitle;
+    private System.Windows.Forms.Panel panel5;
+    private System.Windows.Forms.Label lbl_doanhThuca;
+    private System.Windows.Forms.Label lbl_doanhThucaTitle;
 
     private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Label lbl_trangThaiTitle;
 
-    private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.Button button2;
-    private System.Windows.Forms.Button button3;
-    private System.Windows.Forms.Button button4;
+    private System.Windows.Forms.Panel panel1;
 
-    private System.Windows.Forms.DataGridView dataGridView1;
+    private System.Windows.Forms.Button button5;
+    private System.Windows.Forms.Button btn_chotCa;
+
+    private System.Windows.Forms.Button btn_moCa;
+
+    private System.Windows.Forms.DataGridView dgv_danhSachCa;
 
     #endregion
 }

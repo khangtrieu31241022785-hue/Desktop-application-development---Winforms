@@ -31,61 +31,69 @@ partial class FormReport
     /// </summary>
     private void InitializeComponent()
     {
-        panel1 = new System.Windows.Forms.Panel();
-        button2 = new System.Windows.Forms.Button();
-        button1 = new System.Windows.Forms.Button();
+        components = new System.ComponentModel.Container();
+        pnl_Top = new System.Windows.Forms.Panel();
+        btn_xuatExcel = new System.Windows.Forms.Button();
+        btn_xemBaocao = new System.Windows.Forms.Button();
         panel2 = new System.Windows.Forms.Panel();
         button3 = new System.Windows.Forms.Button();
         button4 = new System.Windows.Forms.Button();
-        dataGridView1 = new System.Windows.Forms.DataGridView();
-        button5 = new System.Windows.Forms.Button();
-        button6 = new System.Windows.Forms.Button();
-        panel3 = new System.Windows.Forms.Panel();
-        textBox1 = new System.Windows.Forms.TextBox();
-        textBox2 = new System.Windows.Forms.TextBox();
-        dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-        dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+        dgv_danhSachHD = new System.Windows.Forms.DataGridView();
+        col_maHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_thoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_khachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_sanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_doanhThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_loiNhuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        col_thanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        imageList1 = new System.Windows.Forms.ImageList(components);
+        cbb_locNgsy = new System.Windows.Forms.ComboBox();
+        dtp_tu = new System.Windows.Forms.DateTimePicker();
         label1 = new System.Windows.Forms.Label();
-        label2 = new System.Windows.Forms.Label();
-        label3 = new System.Windows.Forms.Label();
-        label4 = new System.Windows.Forms.Label();
-        panel1.SuspendLayout();
+        dtp_den = new System.Windows.Forms.DateTimePicker();
+        panel3 = new System.Windows.Forms.Panel();
+        lbl_baoHanhphatsinh = new System.Windows.Forms.Label();
+        lbl_soHoadon = new System.Windows.Forms.Label();
+        lbl_sanPhambanra = new System.Windows.Forms.Label();
+        lbl_loiNhuangop = new System.Windows.Forms.Label();
+        lbl_doanhThu = new System.Windows.Forms.Label();
+        pnl_footer = new System.Windows.Forms.Panel();
+        lbl_footerLeft = new System.Windows.Forms.Label();
+        lbl_footerRight = new System.Windows.Forms.Label();
+        pnl_Top.SuspendLayout();
         panel2.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgv_danhSachHD).BeginInit();
         panel3.SuspendLayout();
+        pnl_footer.SuspendLayout();
         SuspendLayout();
         // 
-        // panel1
+        // pnl_Top
         // 
-        panel1.Controls.Add(dateTimePicker2);
-        panel1.Controls.Add(dateTimePicker1);
-        panel1.Controls.Add(textBox2);
-        panel1.Controls.Add(textBox1);
-        panel1.Controls.Add(button2);
-        panel1.Controls.Add(button1);
-        panel1.Location = new System.Drawing.Point(30, 12);
-        panel1.Name = "panel1";
-        panel1.Size = new System.Drawing.Size(731, 75);
-        panel1.TabIndex = 1;
+        pnl_Top.Controls.Add(btn_xuatExcel);
+        pnl_Top.Controls.Add(btn_xemBaocao);
+        pnl_Top.Location = new System.Drawing.Point(12, 12);
+        pnl_Top.Name = "pnl_Top";
+        pnl_Top.Size = new System.Drawing.Size(874, 75);
+        pnl_Top.TabIndex = 1;
+        pnl_Top.Paint += pnl_Top_Paint;
         // 
-        // button2
+        // btn_xuatExcel
         // 
-        button2.Location = new System.Drawing.Point(612, 17);
-        button2.Name = "button2";
-        button2.Size = new System.Drawing.Size(116, 42);
-        button2.TabIndex = 1;
-        button2.Text = "Làm mới";
-        button2.UseVisualStyleBackColor = true;
+        btn_xuatExcel.Location = new System.Drawing.Point(185, 14);
+        btn_xuatExcel.Name = "btn_xuatExcel";
+        btn_xuatExcel.Size = new System.Drawing.Size(126, 50);
+        btn_xuatExcel.TabIndex = 1;
+        btn_xuatExcel.Text = "📤Xuất Excel";
+        btn_xuatExcel.UseVisualStyleBackColor = true;
         // 
-        // button1
+        // btn_xemBaocao
         // 
-        button1.Location = new System.Drawing.Point(490, 19);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(116, 42);
-        button1.TabIndex = 0;
-        button1.Text = "Thêm";
-        button1.UseVisualStyleBackColor = true;
-        button1.Click += button1_Click;
+        btn_xemBaocao.Location = new System.Drawing.Point(18, 14);
+        btn_xemBaocao.Name = "btn_xemBaocao";
+        btn_xemBaocao.Size = new System.Drawing.Size(128, 50);
+        btn_xemBaocao.TabIndex = 0;
+        btn_xemBaocao.Text = "📊Xem báo cáo";
+        btn_xemBaocao.UseVisualStyleBackColor = true;
         // 
         // panel2
         // 
@@ -114,145 +122,269 @@ partial class FormReport
         button4.Text = "button1";
         button4.UseVisualStyleBackColor = true;
         // 
-        // dataGridView1
+        // dgv_danhSachHD
         // 
-        dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridView1.Location = new System.Drawing.Point(43, 116);
-        dataGridView1.Name = "dataGridView1";
-        dataGridView1.RowHeadersWidth = 51;
-        dataGridView1.Size = new System.Drawing.Size(536, 349);
-        dataGridView1.TabIndex = 2;
-        dataGridView1.Text = "dataGridView1";
+        dgv_danhSachHD.ColumnHeadersHeightSizeMode =
+            System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgv_danhSachHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[]
+            { col_maHD, col_thoiGian, col_khachHang, col_sanPham, col_doanhThu, col_loiNhuan, col_thanhToan });
+        dgv_danhSachHD.Location = new System.Drawing.Point(12, 379);
+        dgv_danhSachHD.Name = "dgv_danhSachHD";
+        dgv_danhSachHD.RowHeadersWidth = 51;
+        dgv_danhSachHD.Size = new System.Drawing.Size(895, 156);
+        dgv_danhSachHD.TabIndex = 2;
+        dgv_danhSachHD.Text = "dataGridView1";
         // 
-        // button5
+        // col_maHD
         // 
-        button5.Location = new System.Drawing.Point(30, 496);
-        button5.Name = "button5";
-        button5.Size = new System.Drawing.Size(100, 39);
-        button5.TabIndex = 3;
-        button5.Text = "Xuất Excel";
-        button5.UseVisualStyleBackColor = true;
+        col_maHD.HeaderText = "Mã HĐ";
+        col_maHD.MinimumWidth = 6;
+        col_maHD.Name = "col_maHD";
+        col_maHD.Width = 125;
         // 
-        // button6
+        // col_thoiGian
         // 
-        button6.Location = new System.Drawing.Point(463, 494);
-        button6.Name = "button6";
-        button6.Size = new System.Drawing.Size(105, 41);
-        button6.TabIndex = 4;
-        button6.Text = "In hóa đơn";
-        button6.UseVisualStyleBackColor = true;
+        col_thoiGian.HeaderText = "Thời gian";
+        col_thoiGian.MinimumWidth = 6;
+        col_thoiGian.Name = "col_thoiGian";
+        col_thoiGian.Width = 125;
         // 
-        // panel3
+        // col_khachHang
         // 
-        panel3.Controls.Add(label4);
-        panel3.Controls.Add(label3);
-        panel3.Controls.Add(label2);
-        panel3.Controls.Add(label1);
-        panel3.Location = new System.Drawing.Point(597, 107);
-        panel3.Name = "panel3";
-        panel3.Size = new System.Drawing.Size(194, 387);
-        panel3.TabIndex = 5;
+        col_khachHang.HeaderText = "Khách Hàng";
+        col_khachHang.MinimumWidth = 6;
+        col_khachHang.Name = "col_khachHang";
+        col_khachHang.Width = 125;
         // 
-        // textBox1
+        // col_sanPham
         // 
-        textBox1.Location = new System.Drawing.Point(13, 25);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new System.Drawing.Size(86, 27);
-        textBox1.TabIndex = 2;
-        textBox1.Text = "Từ ngày";
+        col_sanPham.HeaderText = "Sản Phẩm";
+        col_sanPham.MinimumWidth = 6;
+        col_sanPham.Name = "col_sanPham";
+        col_sanPham.Width = 125;
         // 
-        // textBox2
+        // col_doanhThu
         // 
-        textBox2.Location = new System.Drawing.Point(216, 25);
-        textBox2.Name = "textBox2";
-        textBox2.Size = new System.Drawing.Size(99, 27);
-        textBox2.TabIndex = 3;
-        textBox2.Text = "đến ngày";
+        col_doanhThu.HeaderText = "Doanh Thu";
+        col_doanhThu.MinimumWidth = 6;
+        col_doanhThu.Name = "col_doanhThu";
+        col_doanhThu.Width = 125;
         // 
-        // dateTimePicker1
+        // col_loiNhuan
         // 
-        dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        dateTimePicker1.Location = new System.Drawing.Point(105, 23);
-        dateTimePicker1.Name = "dateTimePicker1";
-        dateTimePicker1.Size = new System.Drawing.Size(98, 27);
-        dateTimePicker1.TabIndex = 4;
+        col_loiNhuan.HeaderText = "Lợi nhuân";
+        col_loiNhuan.MinimumWidth = 6;
+        col_loiNhuan.Name = "col_loiNhuan";
+        col_loiNhuan.Width = 125;
         // 
-        // dateTimePicker2
+        // col_thanhToan
         // 
-        dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        dateTimePicker2.Location = new System.Drawing.Point(321, 25);
-        dateTimePicker2.Name = "dateTimePicker2";
-        dateTimePicker2.Size = new System.Drawing.Size(121, 27);
-        dateTimePicker2.TabIndex = 5;
+        col_thanhToan.HeaderText = "Thanh toán";
+        col_thanhToan.MinimumWidth = 6;
+        col_thanhToan.Name = "col_thanhToan";
+        col_thanhToan.Width = 125;
+        // 
+        // imageList1
+        // 
+        imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+        imageList1.ImageSize = new System.Drawing.Size(16, 16);
+        imageList1.TransparentColor = System.Drawing.Color.Transparent;
+        // 
+        // cbb_locNgsy
+        // 
+        cbb_locNgsy.FormattingEnabled = true;
+        cbb_locNgsy.Items.AddRange(new object[]
+            { "Hôm nay", "", "Hôm qua", "", "7 ngày qua", "", "Tháng này", "", "Tùy chỉnh" });
+        cbb_locNgsy.Location = new System.Drawing.Point(90, 106);
+        cbb_locNgsy.Name = "cbb_locNgsy";
+        cbb_locNgsy.Size = new System.Drawing.Size(712, 28);
+        cbb_locNgsy.TabIndex = 3;
+        // 
+        // dtp_tu
+        // 
+        dtp_tu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+        dtp_tu.Location = new System.Drawing.Point(90, 156);
+        dtp_tu.Name = "dtp_tu";
+        dtp_tu.Size = new System.Drawing.Size(714, 27);
+        dtp_tu.TabIndex = 4;
         // 
         // label1
         // 
-        label1.Location = new System.Drawing.Point(14, 41);
+        label1.Location = new System.Drawing.Point(39, 195);
         label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(150, 32);
-        label1.TabIndex = 0;
-        label1.Text = "Tổng số đơn hàng";
+        label1.Size = new System.Drawing.Size(57, 23);
+        label1.TabIndex = 5;
+        label1.Text = "đến";
+        label1.Click += label1_Click;
         // 
-        // label2
+        // dtp_den
         // 
-        label2.Location = new System.Drawing.Point(14, 123);
-        label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(135, 32);
-        label2.TabIndex = 1;
-        label2.Text = "Tổng doanh thu";
+        dtp_den.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+        dtp_den.Location = new System.Drawing.Point(90, 230);
+        dtp_den.Name = "dtp_den";
+        dtp_den.Size = new System.Drawing.Size(714, 27);
+        dtp_den.TabIndex = 6;
         // 
-        // label3
+        // panel3
         // 
-        label3.Location = new System.Drawing.Point(14, 202);
-        label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(147, 32);
-        label3.TabIndex = 2;
-        label3.Text = "Doanh thu cao nhất";
+        panel3.Controls.Add(lbl_baoHanhphatsinh);
+        panel3.Controls.Add(lbl_soHoadon);
+        panel3.Controls.Add(lbl_sanPhambanra);
+        panel3.Controls.Add(lbl_loiNhuangop);
+        panel3.Controls.Add(lbl_doanhThu);
+        panel3.Location = new System.Drawing.Point(67, 274);
+        panel3.Name = "panel3";
+        panel3.Size = new System.Drawing.Size(761, 99);
+        panel3.TabIndex = 7;
         // 
-        // label4
+        // lbl_baoHanhphatsinh
         // 
-        label4.Location = new System.Drawing.Point(14, 291);
-        label4.Name = "label4";
-        label4.Size = new System.Drawing.Size(147, 32);
-        label4.TabIndex = 3;
-        label4.Text = "Doanh thu thấp nhất";
+        lbl_baoHanhphatsinh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_baoHanhphatsinh.Location = new System.Drawing.Point(618, 20);
+        lbl_baoHanhphatsinh.Name = "lbl_baoHanhphatsinh";
+        lbl_baoHanhphatsinh.Size = new System.Drawing.Size(140, 50);
+        lbl_baoHanhphatsinh.TabIndex = 4;
+        lbl_baoHanhphatsinh.Text = "Bảo hành phát sinh";
+        lbl_baoHanhphatsinh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+        // 
+        // lbl_soHoadon
+        // 
+        lbl_soHoadon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_soHoadon.Location = new System.Drawing.Point(336, 20);
+        lbl_soHoadon.Name = "lbl_soHoadon";
+        lbl_soHoadon.Size = new System.Drawing.Size(111, 50);
+        lbl_soHoadon.TabIndex = 3;
+        lbl_soHoadon.Text = "Số hóa đơn";
+        lbl_soHoadon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+        // 
+        // lbl_sanPhambanra
+        // 
+        lbl_sanPhambanra.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_sanPhambanra.Location = new System.Drawing.Point(464, 20);
+        lbl_sanPhambanra.Name = "lbl_sanPhambanra";
+        lbl_sanPhambanra.Size = new System.Drawing.Size(134, 50);
+        lbl_sanPhambanra.TabIndex = 2;
+        lbl_sanPhambanra.Text = "Sản phẩm bán ra";
+        lbl_sanPhambanra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+        // 
+        // lbl_loiNhuangop
+        // 
+        lbl_loiNhuangop.Anchor =
+            ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top |
+                                                   System.Windows.Forms.AnchorStyles.Bottom) |
+                                                  System.Windows.Forms.AnchorStyles.Left) |
+            System.Windows.Forms.AnchorStyles.Right));
+        lbl_loiNhuangop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_loiNhuangop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        lbl_loiNhuangop.Location = new System.Drawing.Point(176, 21);
+        lbl_loiNhuangop.Name = "lbl_loiNhuangop";
+        lbl_loiNhuangop.Size = new System.Drawing.Size(140, 50);
+        lbl_loiNhuangop.TabIndex = 1;
+        lbl_loiNhuangop.Text = "Lợi nhuận gộp (đ)";
+        lbl_loiNhuangop.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+        // 
+        // lbl_doanhThu
+        // 
+        lbl_doanhThu.Anchor =
+            ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top |
+                                                   System.Windows.Forms.AnchorStyles.Bottom) |
+                                                  System.Windows.Forms.AnchorStyles.Left) |
+            System.Windows.Forms.AnchorStyles.Right));
+        lbl_doanhThu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        lbl_doanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        lbl_doanhThu.Location = new System.Drawing.Point(18, 21);
+        lbl_doanhThu.Name = "lbl_doanhThu";
+        lbl_doanhThu.Size = new System.Drawing.Size(140, 50);
+        lbl_doanhThu.TabIndex = 0;
+        lbl_doanhThu.Text = "Doanh thu (đ)";
+        lbl_doanhThu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+        // 
+        // pnl_footer
+        // 
+        pnl_footer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        pnl_footer.Controls.Add(lbl_footerRight);
+        pnl_footer.Controls.Add(lbl_footerLeft);
+        pnl_footer.Dock = System.Windows.Forms.DockStyle.Bottom;
+        pnl_footer.Location = new System.Drawing.Point(0, 566);
+        pnl_footer.Name = "pnl_footer";
+        pnl_footer.Size = new System.Drawing.Size(915, 28);
+        pnl_footer.TabIndex = 8;
+        // 
+        // lbl_footerLeft
+        // 
+        lbl_footerLeft.Location = new System.Drawing.Point(0, 0);
+        lbl_footerLeft.Name = "lbl_footerLeft";
+        lbl_footerLeft.Size = new System.Drawing.Size(161, 25);
+        lbl_footerLeft.TabIndex = 0;
+        lbl_footerLeft.Text = "Báo cáo ngày:";
+        // 
+        // lbl_footerRight
+        // 
+        lbl_footerRight.Location = new System.Drawing.Point(728, 2);
+        lbl_footerRight.Name = "lbl_footerRight";
+        lbl_footerRight.Size = new System.Drawing.Size(184, 23);
+        lbl_footerRight.TabIndex = 1;
+        lbl_footerRight.Text = "Tỉ lệ lợi nhuân";
         // 
         // FormReport
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(800, 547);
+        ClientSize = new System.Drawing.Size(915, 594);
+        Controls.Add(pnl_footer);
         Controls.Add(panel3);
-        Controls.Add(button6);
-        Controls.Add(button5);
-        Controls.Add(dataGridView1);
-        Controls.Add(panel1);
+        Controls.Add(dtp_den);
+        Controls.Add(label1);
+        Controls.Add(dtp_tu);
+        Controls.Add(cbb_locNgsy);
+        Controls.Add(dgv_danhSachHD);
+        Controls.Add(pnl_Top);
         Text = "Báo cáo doanh thu";
-        panel1.ResumeLayout(false);
-        panel1.PerformLayout();
+        pnl_Top.ResumeLayout(false);
         panel2.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgv_danhSachHD).EndInit();
         panel3.ResumeLayout(false);
+        pnl_footer.ResumeLayout(false);
         ResumeLayout(false);
     }
+    private System.Windows.Forms.Label lbl_footerLeft;
+    private System.Windows.Forms.Label lbl_footerRight;
+
+    private System.Windows.Forms.Panel pnl_footer;
+
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_maHD;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_thoiGian;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_khachHang;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_sanPham;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_doanhThu;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_loiNhuan;
+    private System.Windows.Forms.DataGridViewTextBoxColumn col_thanhToan;
+
+    private System.Windows.Forms.Label lbl_soHoadon;
+    private System.Windows.Forms.Label lbl_baoHanhphatsinh;
+
+    private System.Windows.Forms.Label lbl_sanPhambanra;
+
+    private System.Windows.Forms.Label lbl_loiNhuangop;
+
+    private System.Windows.Forms.Label lbl_doanhThu;
+
+    private System.Windows.Forms.Panel panel3;
 
     private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.DateTimePicker dtp_den;
 
-    private System.Windows.Forms.Button button5;
-    private System.Windows.Forms.Button button6;
-    private System.Windows.Forms.Panel panel3;
-    private System.Windows.Forms.TextBox textBox1;
-    private System.Windows.Forms.TextBox textBox2;
-    private System.Windows.Forms.DateTimePicker dateTimePicker1;
-    private System.Windows.Forms.DateTimePicker dateTimePicker2;
+    private System.Windows.Forms.DateTimePicker dtp_tu;
 
-    private System.Windows.Forms.DataGridView dataGridView1;
-    private System.Windows.Forms.Panel panel1;
-    private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.ComboBox cbb_locNgsy;
+
+    private System.Windows.Forms.ImageList imageList1;
+
+    private System.Windows.Forms.Button btn_xemBaocao;
+    private System.Windows.Forms.Button btn_xuatExcel;
+
+    private System.Windows.Forms.DataGridView dgv_danhSachHD;
+    private System.Windows.Forms.Panel pnl_Top;
     private System.Windows.Forms.Panel panel2;
     private System.Windows.Forms.Button button3;
     private System.Windows.Forms.Button button4;
