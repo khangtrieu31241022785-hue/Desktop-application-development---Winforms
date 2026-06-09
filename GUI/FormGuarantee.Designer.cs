@@ -122,7 +122,7 @@ partial class FormGuarantee
         Controls.Add(groupBox1);
         Margin = new System.Windows.Forms.Padding(6);
         Text = "Tiếp nhận bảo hành";
-        Load += FormWarranty_Load;
+        Load += FormGuarantee_Load;
         ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
         groupBox1.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)dgv_guaranteeList).EndInit();
